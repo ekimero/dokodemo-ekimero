@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#filters {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+label {
+  margin-right: 5px;
+  font-weight: bold;
+  align-self: center;
+}
+
+select {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  min-width: 140px;
+}
+
+#station-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.station {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 15px;
+}
+
+.station strong {
+  font-size: 1.1em;
+}
+
+.station em {
+  color: #666;
+  margin-bottom: 8px;
+  display: block;
+}

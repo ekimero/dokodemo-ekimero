@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>電車メロディアーカイブ</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>電車メロディアーカイブ</h1>
+
+  <div id="filters">
+    <label for="company-filter">会社名：</label>
+    <select id="company-filter">
+      <option value="">すべて</option>
+    </select>
+
+    <label for="line-filter">路線名：</label>
+    <select id="line-filter">
+      <option value="">すべて</option>
+    </select>
+
+    <label for="station-filter">駅名：</label>
+    <select id="station-filter">
+      <option value="">すべて</option>
+    </select>
+
+    <label for="melody-filter">メロディ名：</label>
+    <select id="melody-filter">
+      <option value="">すべて</option>
+    </select>
+  </div>
+
+  <div id="station-list"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

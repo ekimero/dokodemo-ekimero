@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>どこでも駅メロ | 都営地下鉄</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="title-link">
+      <img src="logo.png" alt="アイコン" class="logo">
+      <b class="header1">どこでも駅メロ</b>
+    </a>
+    <nav>
+      <a href="index.html" class="company-btn">ホーム</a>
+      <a href="jr-east.html" class="company-btn">JR東日本</a>
+      <a href="tokyo-metro.html" class="company-btn">東京メトロ</a>
+      <a href="toei.html" class="company-btn">都営地下鉄</a>
+      <a href="archive.html" class="company-btn">アーカイブ</a>
+      <div style="position:relative;display:inline-block;min-width:220px;vertical-align:middle;">
+        <input id="header-search" type="text" placeholder="駅名・メロディ名で検索" style="font-size:1em;padding:8px 14px;border-radius:8px;border:1px solid #bcd;box-shadow:0 2px 12px #1976d220;width:180px;">
+        <div id="header-search-results" style="position:absolute;top:110%;left:0;width:100%;background:#fff;box-shadow:0 2px 12px #1976d220;border-radius:8px;z-index:100;display:none;"></div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" style="padding: 56px 0 40px 0; text-align: center; background: linear-gradient(120deg, #e3f0ff 0%, #f5f5f5 100%); border-radius: 32px; box-shadow: 0 8px 48px rgba(25,118,210,0.12); margin-bottom: 48px; position: relative; overflow: hidden;">
+      <img src="images/train3.png" alt="Toei Train" style="height:120px;box-shadow:0 8px 32px #1976d2a0;position:absolute;left:32px;bottom:24px;z-index:1;">
+      <h1 style="font-size:2.6em; color:#1976d2; font-weight:900; margin-bottom:18px; letter-spacing:2px;position:relative;z-index:2;">都営地下鉄 発車メロディー</h1>
+      <p style="font-size:1.2em; color:#333; margin-bottom:24px;position:relative;z-index:2;">都営地下鉄の路線・駅ごとの発車メロディーを探して聴けます。</p>
+    </section>
+
+    <section class="quick-links" style="margin-bottom:48px;">
+      <h2 style="font-size:1.3em; color:#1976d2; margin-bottom:16px; font-weight:700;">路線別ページ</h2>
+      <div class="quick-btns" id="line-btns" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 32px;"></div>
+      <div style="text-align:center; margin-top:32px;">
+        <a href="toei-archive.html" class="company-btn" style="min-width:200px;font-size:1.1em;padding:16px 28px;box-shadow:0 4px 24px #1976d2a0;">都営地下鉄アーカイブ</a>
+      </div>
+    </section>
+    <div id="filters" style="display:none"></div>
+    <div id="station-list"></div>
+  </main>
+  <script>
+    fetch('stations.json')
+      .then(res => res.json())
+      .then(data => {
+        const lines = Array.from(new Set(data.filter(e => e.company === '都営地下鉄').map(e => e.line)));
+        const btns = document.getElementById('line-btns');
+        lines.forEach(line => {
+          const a = document.createElement('a');
+          a.className = 'company-btn';
+          a.style.minWidth = '200px';
+          a.style.fontSize = '1.1em';
+          a.style.padding = '16px 28px';
+          a.style.boxShadow = '0 4px 24px #1976d2a0';
+          a.href = `toei-lines.html?line=${encodeURIComponent(line)}`;
+          a.textContent = line;
+          btns.appendChild(a);
+        });
+      });
+  </script>
+<script>
+// Header search bar instant search
+let headerStationsData = [];
+fetch('stations.json')
+  .then(res => res.json())
+  .then(data => headerStationsData = data);
+
+document.addEventListener('DOMContentLoaded', function() {
+  const headerInput = document.getElementById('header-search');
+  const headerResults = document.getElementById('header-search-results');
+  if (headerInput) {
+    headerInput.addEventListener('input', function() {
+      const q = headerInput.value.trim().toLowerCase();
+      if (!q) {
+        headerResults.style.display = 'none';
+        headerResults.innerHTML = '';
+        return;
+      }
+      const matches = headerStationsData.filter(st =>
+        st.station.toLowerCase().includes(q) ||
+        st.melody.toLowerCase().includes(q)
+      ).slice(0, 8);
+      if (matches.length === 0) {
+        headerResults.innerHTML = '<div style="padding:12px;color:#888;font-size:1em;">該当なし</div>';
+        headerResults.style.display = 'block';
+        return;
+      }
+      headerResults.innerHTML = matches.map(st => {
+        let audioSrc = '';
+        if (st.audio) {
+          audioSrc = st.audio.match(/^https?:\/\//) ? st.audio : (st.audio.startsWith('audio/') ? st.audio : `audio/${st.audio}`);
+        }
+        let linePage = '';
+        if (st.company === 'JR東日本') linePage = 'jr-east-lines.html';
+        else if (st.company === '東京メトロ') linePage = 'tokyo-metro-lines.html';
+        else if (st.company === '都営地下鉄') linePage = 'toei-lines.html';
+        else linePage = 'archive.html';
+        const lineUrl = `${linePage}?line=${encodeURIComponent(st.line)}`;
+        return `<div style="padding:10px 14px;border-bottom:1px solid #eee;display:flex;align-items:center;gap:10px;">
+          <a href="${lineUrl}" style="font-weight:700;color:#1976d2;text-decoration:underline;flex:1;">${st.station}</a>
+          <span style="font-size:0.95em;color:#333;">${st.melody}</span>
+          ${audioSrc ? `<audio controls src="${audioSrc}" style="width:90px;min-width:60px;"></audio>` : ''}
+        </div>`;
+      }).join('');
+      headerResults.style.display = 'block';
+    });
+    document.addEventListener('click', function(e) {
+      if (!headerResults.contains(e.target) && e.target !== headerInput) {
+        headerResults.style.display = 'none';
+      }
+    });
+  }
+});
+</script>
+</body>
+</html>

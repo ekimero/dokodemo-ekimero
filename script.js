@@ -130,10 +130,15 @@ function render(data) {
   data.forEach(entry => {
     const div = document.createElement('div');
     div.className = 'station';
+    // Support both 'audio' and 'file' property for audio path
+    let audioSrc = entry.audio || entry.file || '';
+    if (audioSrc && !audioSrc.match(/^https?:\/\//) && !audioSrc.startsWith('audio/')) {
+      audioSrc = 'audio/' + audioSrc;
+    }
     div.innerHTML = `
       <strong>${entry.station}</strong>（${entry.line}、${entry.company}）<br>
       <em>${entry.melody}</em><br>
-      <audio controls src="${entry.file}"></audio>
+      ${audioSrc ? `<audio controls src="${audioSrc}"></audio>` : '<span style="color:#888;">音声ファイルなし</span>'}
     `;
     container.appendChild(div);
   });

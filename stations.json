@@ -1117,22 +1117,22 @@
     "company": "JR東日本",
     "line": "山手線",
     "station": "駒込",
-    "melody": "さくらさくら V2",
-    "file": "audio/さくらさくらV2.mp4"
+    "melody": "さくらさくらB",
+    "file": "audio/さくらさくらB.mp3"
   },
   {
     "company": "JR東日本",
     "line": "山手線",
     "station": "駒込",
-    "melody": "さくらさくら V1",
-    "file": "audio/さくらさくらV1.mp4"
+    "melody": "さくらさくらA",
+    "file": "audio/さくらさくらA.mp3"
   },
   {
     "company": "JR東日本",
     "line": "山手線",
     "station": "巣鴨",
     "melody": "春 標準",
-    "file": "audio/春 標準.mp4"
+    "file": "audio/春.mp3"
   },
   {
     "company": "JR東日本",
@@ -1146,7 +1146,7 @@
     "line": "山手線",
     "station": "大塚",
     "melody": "春 標準",
-    "file": "audio/春 標準.mp4"
+    "file": "audio/春.mp3"
   },
   {
     "company": "JR東日本",
@@ -1160,35 +1160,35 @@
     "line": "山手線",
     "station": "池袋",
     "melody": "ビックカメラテーマソング ver.A",
-    "file": "audio/ビックカメラテーマソングverA.mp4"
+    "file": "audio/ビックカメラの歌A.mp3"
   },
   {
     "company": "JR東日本",
     "line": "山手線",
     "station": "池袋",
     "melody": "ビックカメラテーマソング ver.B",
-    "file": "audio/ビックカメラテーマソングverB.mp4"
+    "file": "audio/ビックカメラの歌B.mp3"
   },
   {
     "company": "JR東日本",
     "line": "山手線",
     "station": "池袋",
     "melody": "ビックカメラテーマソング ver.C",
-    "file": "audio/ビックカメラテーマソングverC.mp4"
+    "file": "audio/ビックカメラの歌C.mp3"
   },
   {
     "company": "JR東日本",
     "line": "山手線",
     "station": "池袋",
     "melody": "ビックカメラテーマソング ver.D",
-    "file": "audio/ビックカメラテーマソングverD.mp4"
+    "file": "audio/ビックカメラの歌D.mp3"
   },
   {
     "company": "JR東日本",
     "line": "山手線",
     "station": "目白",
     "melody": "春 標準",
-    "file": "audio/春 標準.mp4"
+    "file": "audio/春.mp3"
   },
   {
     "company": "JR東日本",
@@ -1202,14 +1202,14 @@
     "line": "山手線",
     "station": "高田馬場",
     "melody": "鉄腕アトム ver.B",
-    "file": "audio/鉄腕アトムverB.mp4"
+    "file": "audio/鉄腕アトムB.mp3"
   },
   {
     "company": "JR東日本",
     "line": "山手線",
     "station": "高田馬場",
     "melody": "鉄腕アトム ver.A",
-    "file": "audio/鉄腕アトムverA.mp4"
+    "file": "audio/鉄腕アトムA.mp3"
   },
   {
     "company": "JR東日本",
@@ -1286,14 +1286,14 @@
     "line": "山手線",
     "station": "恵比寿",
     "melody": "第三の男 ver.F",
-    "file": "audio/第三の男verF.mp4"
+    "file": "audio/第三の男F.mp3"
   },
   {
     "company": "JR東日本",
     "line": "山手線",
     "station": "恵比寿",
     "melody": "第三の男 ver.E",
-    "file": "audio/第三の男verE.mp4"
+    "file": "audio/第三の男E.mp3"
   },
   {
     "company": "JR東日本",
@@ -1341,15 +1341,15 @@
     "company": "JR東日本",
     "line": "山手線",
     "station": "大崎",
-    "melody": "首都11-2番",
-    "file": "audio/首都11-2番.mp4"
+    "melody": "遊園地のある駅",
+    "file": "audio/遊園地のある駅.mp3"
   },
   {
     "company": "JR東日本",
     "line": "山手線",
     "station": "大崎",
-    "melody": "首都圏11-3番",
-    "file": "audio/首都圏11-3番.mp4"
+    "melody": "海の駅",
+    "file": "audio/海の駅.mp3"
   },
   {
     "company": "JR東日本",
@@ -1369,15 +1369,15 @@
     "company": "JR東日本",
     "line": "山手線",
     "station": "高輪ゲートウェイ",
-    "melody": "Glorious Gateway",
-    "file": "audio/GloriousGateway.mp4"
+    "melody": "Glorious Gateway A",
+    "file": "audio/GloriousGatewayA.mp3"
   },
   {
     "company": "JR東日本",
     "line": "山手線",
     "station": "高輪ゲートウェイ",
-    "melody": "Glorious Gateway",
-    "file": "audio/GloriousGateway.mp4"
+    "melody": "Glorious Gateway B",
+    "file": "audio/GloriousGatewayB.mp3"
   },
   {
     "company": "JR東日本",

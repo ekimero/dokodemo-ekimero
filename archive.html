@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
           audioSrc = st.audio.match(/^https?:\/\//) ? st.audio : (st.audio.startsWith('audio/') ? st.audio : `audio/${st.audio}`);
         }
             // Make station name clickable, linking to /stations/[station].html
-            const stationUrl = `/stations/${encodeURIComponent(st.station)}.html`;
+        const stationUrl = `stations/${encodeURIComponent(st.station)}.html`;
         // Create a unique anchor id for each melody
         const anchorId = `station-${encodeURIComponent(st.station)}-${encodeURIComponent(st.melody)}`;
         return `<div id="${anchorId}" class="melody-container" style="padding:10px 14px;border-bottom:1px solid #eee;display:flex;align-items:center;gap:10px;">

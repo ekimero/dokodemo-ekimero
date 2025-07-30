@@ -19,12 +19,12 @@ fetch('/stations.json')
       if (st.file) {
         if (st.file.match(/^https?:\/\//)) {
           audioSrc = st.file;
-        } else if (st.file.startsWith('/audio/')) {
+        } else if (st.file.startsWith('/dokodemo-ekimero/audio/')) {
           audioSrc = st.file;
         } else if (st.file.startsWith('audio/')) {
           audioSrc = '/' + st.file;
         } else {
-          audioSrc = '/audio/' + st.file.replace(/^\/*/, '');
+          audioSrc = '/dokodemo-ekimero/audio/' + st.file.replace(/^\/*/, '');
         }
       }
       // Make station name clickable, linking to /stations/[station].html

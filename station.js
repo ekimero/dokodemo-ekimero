@@ -4,7 +4,7 @@
 // Get station name from the page (from the <h1> text)
 const stationName = document.querySelector('.station-hero h1').textContent.replace('駅の発車メロディー', '').trim();
 
-fetch('/stations.json')
+fetch('./stations.json')
   .then(res => res.json())
   .then(data => {
     // Filter melodies for this station

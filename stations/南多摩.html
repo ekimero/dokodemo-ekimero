@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta name="title" content="南多摩 | どこでも駅メロ">
+  <meta name="author" content="ekimero">
+  <meta charset="utf-8" />
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="南多摩発車メロディー。発車メロディ・駅ベルを駅や路線ごとに探して聴けるアーカイブサイト。JR東日本、東京メトロ、都営地下鉄の駅メロを多数収録。">
+  <meta name="keywords" content="発車メロディ,発車メロディー,駅メロ,駅ベル,発車ベル,どこでも駅メロ,どこでも発車ベル,どこでも発車メロディ, 南多摩">
+  <link rel="icon" href="/logo.png" />
+  <meta property="og:image" content="/logo.png">
+  <meta property="og:description" content="南多摩発車メロディー。発車メロディ・駅ベルを駅や路線ごとに探して聴けるアーカイブサイト。JR東日本、東京メトロ、都営地下鉄の駅メロを多数収録。">
+  <meta property="og:title" content="南多摩 | どこでも駅ベル">
+  <meta property="og:url" content="https://ekimero.github.io/dokodemo-ekimero/stations/南多摩.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:site_name" content="南多摩 | どこでも駅ベル">
+  <title>南多摩 | どこでも駅メロ | 発車メロディアーカイブ・駅ベル検索サイト</title>
+  <link rel="stylesheet" href="/index.css">
+  <link rel="canonical" href="https://ekimero.github.io/dokodemo-ekimero/stations/南多摩.html" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "南多摩 | どこでも駅メロ | 発車メロディアーカイブ・駅ベル検索サイト",
+    "url": "https://ekimero.github.io/dokodemo-ekimero/stations/南多摩.html",
+    "description": "南多摩発車メロディー。発車メロディ・駅ベルを駅や路線ごとに探して聴けるアーカイブサイト。JR東日本、東京メトロ、都営地下鉄の駅メロを多数収録。",
+    "inLanguage": "ja"
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <a href="/index.html" class="title-link">
+      <img src="/logo.png" alt="どこでも駅メロのロゴ - 発車メロディ検索サイト" class="logo">
+      <b class="header1">どこでも駅メロ</b>
+    </a>
+    <nav>
+      <a href="/index.html" class="company-btn">ホーム</a>
+      <a href="/jr-east.html" class="company-btn">JR東日本</a>
+      <a href="/tokyo-metro.html" class="company-btn">東京メトロ</a>
+      <a href="/toei.html" class="company-btn">都営地下鉄</a>
+      <a href="/archive.html" class="company-btn">アーカイブ</a>
+      <div style="position:relative;display:inline-block;min-width:220px;vertical-align:middle;">
+        <input id="header-search" type="text" placeholder="駅名・メロディ名で検索" style="font-size:1em;padding:8px 14px;border-radius:8px;border:1px solid #bcd;box-shadow:0 2px 12px #1976d220;width:180px;">
+        <div id="header-search-results" style="position:absolute;top:110%;left:0;width:100%;background:#fff;box-shadow:0 2px 12px #1976d220;border-radius:8px;z-index:100;display:none;"></div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="station-hero" style="padding: 48px 0 32px 0; text-align: center; background: linear-gradient(120deg, #e3f0ff 0%, #f5f5f5 100%); border-radius: 32px; box-shadow: 0 8px 48px rgba(25,118,210,0.12); margin-bottom: 40px; position: relative; overflow: hidden;">
+      <h1 style="font-size:2.2em; color:#1976d2; font-weight:800; margin-bottom:16px;">南多摩駅の発車メロディー</h1>
+      <p style="font-size:1.1em; color:#333; margin-bottom:24px;">この駅の発車メロディー一覧です。</p>
+    </section>
+    <section class="station-melodies" style="background:#fff;border-radius:24px;box-shadow:0 4px 24px #1976d2a0;padding:32px;max-width:900px;margin-left:auto;margin-right:auto;">
+      <div id="melody-list"></div>
+    </section>
+  </main>
+  <script src="/station.js"></script>
+</main>
+<script>
+// Header search bar instant search
+let headerStationsData = [];
+fetch('/stations.json')
+  .then(res => res.json())
+  .then(data => headerStationsData = data);
+
+document.addEventListener('DOMContentLoaded', function() {
+  const headerInput = document.getElementById('header-search');
+  const headerResults = document.getElementById('header-search-results');
+  if (headerInput) {
+    headerInput.addEventListener('input', function() {
+      const q = headerInput.value.trim().toLowerCase();
+      if (!q) {
+        headerResults.style.display = 'none';
+        headerResults.innerHTML = '';
+        return;
+      }
+      const matches = headerStationsData.filter(st =>
+        st.station.toLowerCase().includes(q) ||
+        st.melody.toLowerCase().includes(q)
+      ).slice(0, 8);
+      if (matches.length === 0) {
+        headerResults.innerHTML = '<div style="padding:12px;color:#888;font-size:1em;">該当なし</div>';
+        headerResults.style.display = 'block';
+        return;
+      }
+      headerResults.innerHTML = matches.map(st => {
+        let audioSrc = '';
+        if (st.audio) {
+          audioSrc = st.audio.match(/^https?:\/\//) ? st.audio : (st.audio.startsWith('audio/') ? st.audio : `audio/${st.audio}`);
+        }
+        const stationUrl = `/stations/${encodeURIComponent(st.station)}.html`;
+        return `<div style="padding:10px 14px;border-bottom:1px solid #eee;display:flex;align-items:center;gap:10px;">
+          <a href="${stationUrl}" style="font-weight:700;color:#1976d2;text-decoration:underline;flex:1;">${st.station}</a>
+          <span style="font-size:0.95em;color:#333;">${st.melody}</span>
+          ${audioSrc ? `<audio controls src="${audioSrc}" style="width:90px;min-width:60px;"></audio>` : ''}
+        </div>`;
+      }).join('');
+      headerResults.style.display = 'block';
+    });
+    document.addEventListener('click', function(e) {
+      if (!headerResults.contains(e.target) && e.target !== headerInput) {
+        headerResults.style.display = 'none';
+      }
+    });
+  }
+});
+// Search feature for stations and melodies
+let stationsData = [];
+fetch('/stations.json')
+  .then(res => res.json())
+  .then(data => stationsData = data);
+
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('search-form');
+  const input = document.getElementById('search-input');
+  const results = document.getElementById('search-results');
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const q = input.value.trim();
+      if (!q) {
+        results.innerHTML = '';
+        return;
+      }
+      const lowerQ = q.toLowerCase();
+      const matches = stationsData.filter(st =>
+        st.station.toLowerCase().includes(lowerQ) ||
+        st.melody.toLowerCase().includes(lowerQ)
+      );
+      if (matches.length === 0) {
+        results.innerHTML = '<div style="padding:24px;color:#888;font-size:1.2em;">該当する駅やメロディは見つかりませんでした。</div>';
+        return;
+      }
+      results.innerHTML = matches.map(st => {
+        let audioSrc = '';
+        if (st.audio) {
+          // If audio path is not absolute, prepend audio/ folder
+          audioSrc = st.audio.match(/^https?:\/\//) ? st.audio : (st.audio.startsWith('audio/') ? st.audio : `audio/${st.audio}`);
+        }
+        // Determine line page by company
+        let linePage = '';
+        if (st.company === 'JR東日本') linePage = 'jr-east-lines.html';
+        else if (st.company === '東京メトロ') linePage = 'tokyo-metro-lines.html';
+        else if (st.company === '都営地下鉄') linePage = 'toei-lines.html';
+        else linePage = 'archive.html';
+        const lineUrl = `${linePage}?line=${encodeURIComponent(st.line)}`;
+        return `
+          <div style="background:#fff;border-radius:16px;box-shadow:0 2px 12px #1976d220;padding:18px;margin-bottom:18px;display:flex;align-items:center;gap:18px;">
+            <div style="flex:1;min-width:0;">
+              <div style="font-size:1.15em;font-weight:700;color:#1976d2;">
+                <a href="${lineUrl}" style="color:#1976d2;text-decoration:underline;">${st.station}</a> (${st.line}・${st.company})
+              </div>
+              <div style="font-size:1.1em;color:#333;">${st.melody}</div>
+            </div>
+            ${audioSrc ? `<audio controls src="${audioSrc}" style="width:180px;min-width:120px;"></audio>` : ''}
+          </div>
+        `;
+      }).join('');
+    });
+  }
+});
+</script>
+</body>
+</html>

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+  <meta name="title" content="どこでも駅ベル | 発車メロディアーカイブ・駅ベル検索サイト">
+  <meta name="author" content="ekimero">
   <meta charset="utf-8" />
   <meta name="robots" content="index, follow">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -28,21 +30,20 @@
   "inLanguage": "ja"
 }
 </script>
-
-  
 </head>
+
 <body>
   <header>
-    <a href="index.html" class="title-link">
-      <img src="logo.png" alt="どこでも駅メロのロゴ - 発車メロディ検索サイト" class="logo">
+    <a href="/index.html" class="title-link">
+      <img src="/logo.png" alt="どこでも駅メロのロゴ - 発車メロディ検索サイト" class="logo">
       <b class="header1">どこでも駅メロ</b>
     </a>
     <nav>
-      <a href="index.html" class="company-btn">ホーム</a>
-      <a href="jr-east.html" class="company-btn">JR東日本</a>
-      <a href="tokyo-metro.html" class="company-btn">東京メトロ</a>
-      <a href="toei.html" class="company-btn">都営地下鉄</a>
-      <a href="archive.html" class="company-btn">アーカイブ</a>
+      <a href="/index.html" class="company-btn">ホーム</a>
+      <a href="/jr-east.html" class="company-btn">JR東日本</a>
+      <a href="/tokyo-metro.html" class="company-btn">東京メトロ</a>
+      <a href="/toei.html" class="company-btn">都営地下鉄</a>
+      <a href="/archive.html" class="company-btn">アーカイブ</a>
       <div style="position:relative;display:inline-block;min-width:220px;vertical-align:middle;">
         <input id="header-search" type="text" placeholder="駅名・メロディ名で検索" style="font-size:1em;padding:8px 14px;border-radius:8px;border:1px solid #bcd;box-shadow:0 2px 12px #1976d220;width:180px;">
         <div id="header-search-results" style="position:absolute;top:110%;left:0;width:100%;background:#fff;box-shadow:0 2px 12px #1976d220;border-radius:8px;z-index:100;display:none;"></div>
@@ -136,14 +137,10 @@ document.addEventListener('DOMContentLoaded', function() {
         if (st.audio) {
           audioSrc = st.audio.match(/^https?:\/\//) ? st.audio : (st.audio.startsWith('audio/') ? st.audio : `audio/${st.audio}`);
         }
-        let linePage = '';
-        if (st.company === 'JR東日本') linePage = 'jr-east-lines.html';
-        else if (st.company === '東京メトロ') linePage = 'tokyo-metro-lines.html';
-        else if (st.company === '都営地下鉄') linePage = 'toei-lines.html';
-        else linePage = 'archive.html';
-        const lineUrl = `${linePage}?line=${encodeURIComponent(st.line)}`;
+        // Make station name clickable, linking to /stations/[station].html
+        const stationUrl = `/stations/${encodeURIComponent(st.station)}.html`;
         return `<div style="padding:10px 14px;border-bottom:1px solid #eee;display:flex;align-items:center;gap:10px;">
-          <a href="${lineUrl}" style="font-weight:700;color:#1976d2;text-decoration:underline;flex:1;">${st.station}</a>
+          <a href="${stationUrl}" style="font-weight:700;color:#1976d2;text-decoration:underline;flex:1;">${st.station}</a>
           <span style="font-size:0.95em;color:#333;">${st.melody}</span>
           ${audioSrc ? `<audio controls src="${audioSrc}" style="width:90px;min-width:60px;"></audio>` : ''}
         </div>`;
@@ -187,21 +184,15 @@ document.addEventListener('DOMContentLoaded', function() {
       results.innerHTML = matches.map(st => {
         let audioSrc = '';
         if (st.audio) {
-          // If audio path is not absolute, prepend audio/ folder
           audioSrc = st.audio.match(/^https?:\/\//) ? st.audio : (st.audio.startsWith('audio/') ? st.audio : `audio/${st.audio}`);
         }
-        // Determine line page by company
-        let linePage = '';
-        if (st.company === 'JR東日本') linePage = 'jr-east-lines.html';
-        else if (st.company === '東京メトロ') linePage = 'tokyo-metro-lines.html';
-        else if (st.company === '都営地下鉄') linePage = 'toei-lines.html';
-        else linePage = 'archive.html';
-        const lineUrl = `${linePage}?line=${encodeURIComponent(st.line)}`;
+        // Make station name clickable, linking to /stations/[station].html
+        const stationUrl = `/stations/${encodeURIComponent(st.station)}.html`;
         return `
           <div style="background:#fff;border-radius:16px;box-shadow:0 2px 12px #1976d220;padding:18px;margin-bottom:18px;display:flex;align-items:center;gap:18px;">
             <div style="flex:1;min-width:0;">
               <div style="font-size:1.15em;font-weight:700;color:#1976d2;">
-                <a href="${lineUrl}" style="color:#1976d2;text-decoration:underline;">${st.station}</a> (${st.line}・${st.company})
+                <a href="${stationUrl}" style="color:#1976d2;text-decoration:underline;">${st.station}</a> (${st.line}・${st.company})
               </div>
               <div style="font-size:1.1em;color:#333;">${st.melody}</div>
             </div>

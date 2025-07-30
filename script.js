@@ -135,8 +135,10 @@ function render(data) {
     if (audioSrc && !audioSrc.match(/^https?:\/\//) && !audioSrc.startsWith('audio/')) {
       audioSrc = 'audio/' + audioSrc;
     }
+    // Make station name clickable, linking to /stations/[station].html
+    const stationLink = `<a href="/stations/${encodeURIComponent(entry.station)}.html" style="color:#1976d2;text-decoration:underline;font-weight:700;">${entry.station}</a>`;
     div.innerHTML = `
-      <strong>${entry.station}</strong>（${entry.line}、${entry.company}）<br>
+      <strong>${stationLink}</strong>（${entry.line}、${entry.company}）<br>
       <em>${entry.melody}</em><br>
       ${audioSrc ? `<audio controls src="${audioSrc}"></audio>` : '<span style="color:#888;">音声ファイルなし</span>'}
     `;

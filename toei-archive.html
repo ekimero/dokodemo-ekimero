@@ -70,22 +70,18 @@ document.addEventListener('DOMContentLoaded', function() {
         headerResults.style.display = 'block';
         return;
       }
-      headerResults.innerHTML = matches.map(st => {
-        let audioSrc = '';
-        if (st.audio) {
-          audioSrc = st.audio.match(/^https?:\/\//) ? st.audio : (st.audio.startsWith('audio/') ? st.audio : `audio/${st.audio}`);
-        }
-        let linePage = '';
-        if (st.company === 'JR東日本') linePage = 'jr-east-lines.html';
-        else if (st.company === '東京メトロ') linePage = 'tokyo-metro-lines.html';
-        else if (st.company === '都営地下鉄') linePage = 'toei-lines.html';
-        else linePage = 'archive.html';
-        const lineUrl = `${linePage}?line=${encodeURIComponent(st.line)}`;
-        return `<div style="padding:10px 14px;border-bottom:1px solid #eee;display:flex;align-items:center;gap:10px;">
-          <a href="${lineUrl}" style="font-weight:700;color:#1976d2;text-decoration:underline;flex:1;">${st.station}</a>
-          <span style="font-size:0.95em;color:#333;">${st.melody}</span>
-          ${audioSrc ? `<audio controls src="${audioSrc}" style="width:90px;min-width:60px;"></audio>` : ''}
-        </div>`;
+          headerResults.innerHTML = matches.map(st => {
+            let audioSrc = '';
+            if (st.audio) {
+              audioSrc = st.audio.match(/^https?:\/\//) ? st.audio : (st.audio.startsWith('audio/') ? st.audio : `audio/${st.audio}`);
+            }
+            // Make station name clickable, linking to /stations/[station].html
+            const stationUrl = `/stations/${encodeURIComponent(st.station)}.html`;
+            return `<div style="padding:10px 14px;border-bottom:1px solid #eee;display:flex;align-items:center;gap:10px;">
+              <a href="${stationUrl}" style="font-weight:700;color:#1976d2;text-decoration:underline;flex:1;">${st.station}</a>
+              <span style="font-size:0.95em;color:#333;">${st.melody}</span>
+              ${audioSrc ? `<audio controls src="${audioSrc}" style="width:90px;min-width:60px;"></audio>` : ''}
+            </div>`;
       }).join('');
       headerResults.style.display = 'block';
     });

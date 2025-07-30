@@ -3,7 +3,33 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>どこでも駅メロ | JR東日本</title>
+  <meta name="title" content="JR東日本 | どこでも駅ベル | 発車メロディアーカイブ・駅ベル検索サイト">
+  <meta name="author" content="ekimero">
+  <meta charset="utf-8" />
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="JR東日本の発車メロディ・駅ベルを路線や駅ごとに探して聴けるアーカイブサイト。">
+  <meta name="keywords" content="発車メロディ,駅メロ,駅ベル,発車ベル,どこでも駅メロ,JR東日本,どこでも駅ベル,発車メロディアーカイブ">
+  <link rel="icon" href="logo.png" />
+  <meta property="og:image" content="logo.png">
+  <meta property="og:description" content="JR東日本の発車メロディ・駅ベルを路線や駅ごとに探して聴けるアーカイブサイト。">
+  <meta property="og:title" content="JR東日本 | どこでも駅ベル">
+  <meta property="og:url" content="https://ekimero.github.io/dokodemo-ekimero/jr-east.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:site_name" content="JR東日本 | どこでも駅ベル">
+  <title>JR東日本 | どこでも駅メロ | 発車メロディアーカイブ・駅ベル検索サイト</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="canonical" href="https://ekimero.github.io/dokodemo-ekimero/jr-east.html" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "JR東日本 | どこでも駅メロ | 発車メロディアーカイブ・駅ベル検索サイト",
+    "url": "https://ekimero.github.io/dokodemo-ekimero/jr-east.html",
+    "description": "JR東日本の発車メロディ・駅ベルを路線や駅ごとに探して聴けるアーカイブサイト。",
+    "inLanguage": "ja"
+  }
+  </script>
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -91,14 +117,10 @@ document.addEventListener('DOMContentLoaded', function() {
         if (st.audio) {
           audioSrc = st.audio.match(/^https?:\/\//) ? st.audio : (st.audio.startsWith('audio/') ? st.audio : `audio/${st.audio}`);
         }
-        let linePage = '';
-        if (st.company === 'JR東日本') linePage = 'jr-east-lines.html';
-        else if (st.company === '東京メトロ') linePage = 'tokyo-metro-lines.html';
-        else if (st.company === '都営地下鉄') linePage = 'toei-lines.html';
-        else linePage = 'archive.html';
-        const lineUrl = `${linePage}?line=${encodeURIComponent(st.line)}`;
+        // Make station name clickable, linking to /stations/[station].html
+        const stationUrl = `/stations/${encodeURIComponent(st.station)}.html`;
         return `<div style="padding:10px 14px;border-bottom:1px solid #eee;display:flex;align-items:center;gap:10px;">
-          <a href="${lineUrl}" style="font-weight:700;color:#1976d2;text-decoration:underline;flex:1;">${st.station}</a>
+          <a href="${stationUrl}" style="font-weight:700;color:#1976d2;text-decoration:underline;flex:1;">${st.station}</a>
           <span style="font-size:0.95em;color:#333;">${st.melody}</span>
           ${audioSrc ? `<audio controls src="${audioSrc}" style="width:90px;min-width:60px;"></audio>` : ''}
         </div>`;

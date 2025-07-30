@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (st.audio) {
           audioSrc = st.audio.match(/^https?:\/\//) ? st.audio : (st.audio.startsWith('audio/') ? st.audio : `audio/${st.audio}`);
         }
-        const stationUrl = `/stations/${encodeURIComponent(st.station)}.html`;
+        const stationUrl = `/dokodemo-ekimero/stations/${encodeURIComponent(st.station)}.html`;
         return `<div style="padding:10px 14px;border-bottom:1px solid #eee;display:flex;align-items:center;gap:10px;">
           <a href="${stationUrl}" style="font-weight:700;color:#1976d2;text-decoration:underline;flex:1;">${st.station}</a>
           <span style="font-size:0.95em;color:#333;">${st.melody}</span>

@@ -28,7 +28,7 @@ fetch('/stations.json')
         }
       }
       // Make station name clickable, linking to /stations/[station].html
-      const stationLink = `<a href="/stations/${encodeURIComponent(st.station)}.html" style="color:#1976d2;text-decoration:underline;font-weight:700;">${st.station}</a>`;
+      const stationLink = `<a href="/dokodemo-ekimero/stations/${encodeURIComponent(st.station)}.html" style="color:#1976d2;text-decoration:underline;font-weight:700;">${st.station}</a>`;
       return `<div style="padding:18px 0;border-bottom:1px solid #eee;display:flex;align-items:center;gap:18px;">
         <span style="font-size:1.1em;min-width:120px;">${st.melody}</span>
         ${audioSrc ? `<audio controls src="${audioSrc}" style="width:180px;min-width:120px;"></audio>` : '<span style="color:#888;">音源なし</span>'}

@@ -4,7 +4,7 @@
 // Get station name from the page (from the <h1> text)
 const stationName = document.querySelector('.station-hero h1').textContent.replace('駅の発車メロディー', '').trim();
 
-fetch('./stations.json')
+fetch('/dokodemo-ekimero/stations.json')
   .then(res => res.json())
   .then(data => {
     // Filter melodies for this station
@@ -19,15 +19,10 @@ fetch('./stations.json')
       if (st.file) {
         if (st.file.match(/^https?:\/\//)) {
           audioSrc = st.file;
-        } else if (st.file.startsWith('/dokodemo-ekimero/audio/')) {
-          audioSrc = st.file;
-        } else if (st.file.startsWith('audio/')) {
-          audioSrc = '/' + st.file;
         } else {
-          audioSrc = '/dokodemo-ekimero/audio/' + st.file.replace(/^\/*/, '');
+          audioSrc = '/dokodemo-ekimero/audio/' + st.file.replace(/^\/?audio\//, '');
         }
       }
-      // Make station name clickable, linking to /stations/[station].html
       const stationLink = `<a href="/dokodemo-ekimero/stations/${encodeURIComponent(st.station)}.html" style="color:#1976d2;text-decoration:underline;font-weight:700;">${st.station}</a>`;
       return `<div style="padding:18px 0;border-bottom:1px solid #eee;display:flex;align-items:center;gap:18px;">
         <span style="font-size:1.1em;min-width:120px;">${st.melody}</span>

@@ -56,12 +56,12 @@
       <div id="melody-list"></div>
     </section>
   </main>
-  <script src="/station.js"></script>
+  <script src="/dokodemo-ekimero/station.js"></script>
 </main>
 <script>
 // Header search bar instant search
 let headerStationsData = [];
-fetch('/stations.json')
+fetch('/dokodemo-ekimero/stations.json')
   .then(res => res.json())
   .then(data => headerStationsData = data);
 

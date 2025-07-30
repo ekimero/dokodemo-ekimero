@@ -216,4 +216,40 @@ audio {
   audio {
     width: 100%;
   }
+
+  @media screen and (max-width: 600px) {
+  header {
+    flex-direction: row;       /* Keep header items in a row */
+    align-items: center;
+    padding: 8px 16px;         /* Less padding */
+    gap: 12px;                 /* Add some horizontal space */
+  }
+
+  .logo {
+    height: 32px;
+    width: 32px;
+    margin-right: 8px;
+  }
+
+  .header1 {
+    font-size: 1.3em;
+    white-space: nowrap;       /* Prevent title from wrapping */
+    flex-grow: 1;              /* Take remaining space */
+    overflow: hidden;
+    text-overflow: ellipsis;   /* Ellipsis if too long */
+  }
+
+  nav {
+    flex-direction: row;       /* Keep buttons in a row */
+    gap: 8px;
+  }
+
+  .company-btn {
+    padding: 8px 12px;
+    font-size: 0.9em;
+    min-width: auto;           /* Remove minimum width */
+    width: auto;               /* Make buttons just wide enough */
+    white-space: nowrap;
+  }
+}
 }

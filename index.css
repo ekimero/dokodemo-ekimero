@@ -18,11 +18,11 @@ header {
   z-index: 100;
 }
 
-.logo {
-/* Remove text-decoration from the parent link to prevent line-through/underline on header text */
 .title-link {
   text-decoration: none !important;
 }
+
+.logo {
   height: 48px;
   width: 48px;
   margin-right: 12px;
@@ -55,7 +55,9 @@ nav {
   transition: background 0.2s, box-shadow 0.2s;
   box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
 }
-.company-btn:hover, .company-btn.active {
+
+.company-btn:hover, 
+.company-btn.active {
   background: #1565c0;
   box-shadow: 0 4px 16px rgba(25, 118, 210, 0.12);
 }
@@ -79,6 +81,7 @@ h1 {
   margin: 48px 0 32px 0;
   font-size: 0.9em;
 }
+
 .hero-logo {
   margin-top: 24px;
   width: 120px;
@@ -91,6 +94,7 @@ h1 {
   text-align: center;
   margin: 32px 0;
 }
+
 .quick-btns {
   display: flex;
   justify-content: center;
@@ -139,6 +143,7 @@ select {
   padding: 18px 20px;
   transition: box-shadow 0.2s;
 }
+
 .station:hover {
   box-shadow: 0 4px 24px rgba(25, 118, 210, 0.16);
 }
@@ -216,13 +221,14 @@ audio {
   audio {
     width: 100%;
   }
+}
 
-  @media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
   header {
-    flex-direction: row;       /* Keep header items in a row */
+    flex-direction: row;
     align-items: center;
-    padding: 8px 16px;         /* Less padding */
-    gap: 12px;                 /* Add some horizontal space */
+    padding: 8px 16px;
+    gap: 12px;
   }
 
   .logo {
@@ -233,23 +239,22 @@ audio {
 
   .header1 {
     font-size: 1.3em;
-    white-space: nowrap;       /* Prevent title from wrapping */
-    flex-grow: 1;              /* Take remaining space */
+    white-space: nowrap;
+    flex-grow: 1;
     overflow: hidden;
-    text-overflow: ellipsis;   /* Ellipsis if too long */
+    text-overflow: ellipsis;
   }
 
   nav {
-    flex-direction: row;       /* Keep buttons in a row */
+    flex-direction: row;
     gap: 8px;
   }
 
   .company-btn {
     padding: 8px 12px;
     font-size: 0.9em;
-    min-width: auto;           /* Remove minimum width */
-    width: auto;               /* Make buttons just wide enough */
+    min-width: auto;
+    width: auto;
     white-space: nowrap;
   }
-}
 }

@@ -168,6 +168,7 @@ audio {
   background: #f7fbff;
 }
 
+/* MOBILE STYLES ONLY */
 @media screen and (max-width: 600px) {
   header {
     flex-direction: column;
@@ -184,6 +185,7 @@ audio {
 
   .header1 {
     font-size: 1.5em;
+    display: none; /* ⛔ Hide "どこでも駅メロ" text */
   }
 
   .logo {
@@ -221,40 +223,8 @@ audio {
   audio {
     width: 100%;
   }
-}
-
-@media screen and (max-width: 400px) {
-  header {
-    flex-direction: row;
-    align-items: center;
-    padding: 8px 16px;
-    gap: 12px;
-  }
-
-  .logo {
-    height: 32px;
-    width: 32px;
-    margin-right: 8px;
-  }
-
-  .header1 {
-    font-size: 1.3em;
-    white-space: nowrap;
-    flex-grow: 1;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
 
   nav {
-    flex-direction: row;
-    gap: 8px;
-  }
-
-  .company-btn {
-    padding: 8px 12px;
-    font-size: 0.9em;
-    min-width: auto;
-    width: auto;
-    white-space: nowrap;
+    display: none; /* ⛔ Hide nav completely (Home + Archive + any search) */
   }
 }

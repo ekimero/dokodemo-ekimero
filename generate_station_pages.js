@@ -16,7 +16,7 @@ if (!fs.existsSync(outputDir)) {
 }
 stationNames.forEach(station => {
   // Replace {{station}} in template
-  const html = template.replace(/{{station}}/g, station);
+  const html = template.replace(/\{\{station\}\}/g, station);
   // Save as stations/[station].html (e.g., stations/東京.html)
   const filename = path.join(outputDir, `${station}.html`);
   fs.writeFileSync(filename, html, 'utf8');

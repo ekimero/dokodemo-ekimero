@@ -893,7 +893,7 @@
     "line": "埼京線",
     "station": "十条",
     "melody": "せせらぎ 旧永楽Ver",
-    "file": "audio/せせらぎ 旧永楽Ver.mp3"
+    "file": "audio/せせらぎ.mp3"
   },
   {
     "company": "JR東日本",
@@ -1263,8 +1263,15 @@
     "company": "JR東日本",
     "line": "東海道線",
     "station": "藤沢",
-    "melody": "藤沢市歌",
-    "file": "audio/藤沢市歌.mp3"
+    "melody": "藤沢市歌A",
+    "file": "audio/藤沢市歌A.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "東海道線",
+    "station": "藤沢",
+    "melody": "藤沢市歌B",
+    "file": "audio/藤沢市歌B.mp3"
   },
   {
     "company": "JR東日本",
@@ -1284,15 +1291,29 @@
     "company": "JR東日本",
     "line": "東海道線",
     "station": "辻堂",
-    "melody": "浜辺の歌",
-    "file": "audio/浜辺の歌.mp3"
+    "melody": "浜辺の歌A",
+    "file": "audio/浜辺の歌A.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "東海道線",
+    "station": "辻堂",
+    "melody": "浜辺の歌B",
+    "file": "audio/浜辺の歌B.mp3"
   },
   {
     "company": "JR東日本",
     "line": "東海道線",
     "station": "茅ケ崎",
-    "melody": "希望の轍",
-    "file": "audio/希望の轍.mp3"
+    "melody": "希望の轍A",
+    "file": "audio/希望の轍A.mp3.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "東海道線",
+    "station": "茅ケ崎",
+    "melody": "希望の轍B",
+    "file": "audio/希望の轍B.mp3.mp3"
   },
   {
     "company": "JR東日本",
@@ -1333,8 +1354,15 @@
     "company": "JR東日本",
     "line": "東海道線",
     "station": "二宮",
-    "melody": "朧月夜",
-    "file": "audio/朧月夜.mp3"
+    "melody": "朧月夜A",
+    "file": "audio/朧月夜A.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "東海道線",
+    "station": "二宮",
+    "melody": "朧月夜B",
+    "file": "audio/朧月夜B.mp3"
   },
   {
     "company": "JR東日本",
@@ -1361,8 +1389,29 @@
     "company": "JR東日本",
     "line": "東海道線",
     "station": "小田原",
-    "melody": "お猿のかごや",
-    "file": "audio/お猿のかごや.mp3"
+    "melody": "お猿のかごやA",
+    "file": "audio/お猿のかごやA.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "東海道線",
+    "station": "小田原",
+    "melody": "お猿のかごやB",
+    "file": "audio/お猿のかごやB.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "東海道線",
+    "station": "小田原",
+    "melody": "お猿のかごやC",
+    "file": "audio/お猿のかごやC.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "東海道線",
+    "station": "小田原",
+    "melody": "お猿のかごやD",
+    "file": "audio/お猿のかごやD.mp3"
   },
   {
     "company": "JR東日本",
@@ -2278,8 +2327,15 @@
     "company": "JR東日本",
     "line": "京浜東北線",
     "station": "高輪ゲートウェイ",
-    "melody": "Glorious Gateway -The Theme of TAKANAWA GATEWAY CITY-",
-    "file": "audio/Glorious Gateway -The Theme of TAKANAWA GATEWAY CITY-.mp3"
+    "melody": "Glorious Gateway C",
+    "file": "audio/GloriousGatewayC.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "京浜東北線",
+    "station": "高輪ゲートウェイ",
+    "melody": "Glorious Gateway D",
+    "file": "audio/GloriousGatewayD.mp3"
   },
   {
     "company": "JR東日本",
@@ -2915,6 +2971,20 @@
     "company": "JR東日本",
     "line": "中央線快速",
     "station": "立川",
+    "melody": "立川1番",
+    "file": "audio/立川1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "中央線快速",
+    "station": "立川",
+    "melody": "立川2番",
+    "file": "audio/立川2番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "中央線快速",
+    "station": "立川",
     "melody": "首都圏8番",
     "file": "audio/首都圏8番.mp3"
   },
@@ -3063,7 +3133,7 @@
     "line": "中央・総武線各駅停車",
     "station": "阿佐ケ谷",
     "melody": "たなばたさま B",
-    "file": "audio/たなばたさま B.mp3"
+    "file": "audio/たなばたさまB.mp3"
   },
   {
     "company": "JR東日本",

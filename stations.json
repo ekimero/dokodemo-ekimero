@@ -6,49 +6,49 @@
     "melody": "首都圏11番",
     "file": "audio/首都圏11番.mp3"
   },
-    {
+  {
     "company": "JR東日本",
     "line": "山手線",
     "station": "東京",
     "melody": "首都圏11-1番",
     "file": "audio/首都圏11-1番.mp3"
   },
-    {
+  {
     "company": "JR東日本",
     "line": "山手線",
     "station": "神田",
     "melody": "モンダミンCMソング ver.B",
-    "file": "audio/モンダミンCMソングverB.mp3"
+    "file": "audio/モンダミンCMソングverB.mp3"
   },
   {
     "company": "JR東日本",
     "line": "山手線",
     "station": "神田",
     "melody": "モンダミンCMソング ver.A",
-    "file": "audio/モンダミンCMソングverA.mp3"
+    "file": "audio/モンダミンCMソングverA.mp3"
   },
-    {
+  {
     "company": "JR東日本",
     "line": "山手線",
     "station": "秋葉原",
     "melody": "首都圏11-1番",
     "file": "audio/首都圏11-1番.mp3"
   },
-    {
+  {
     "company": "JR東日本",
     "line": "山手線",
     "station": "御徒町",
     "melody": "首都圏11番",
     "file": "audio/首都圏11番.mp3"
   },
-    {
+  {
     "company": "JR東日本",
     "line": "山手線",
     "station": "御徒町",
     "melody": "首都圏11-1番",
     "file": "audio/首都圏11-1番.mp3"
   },
-    {
+  {
     "company": "JR東日本",
     "line": "山手線",
     "station": "上野",
@@ -74,7 +74,7 @@
     "line": "山手線",
     "station": "鶯谷",
     "melody": "せせらぎ",
-    "file": "audio/せせらぎ.mp3"
+    "file": "audio/せせらぎ.mp3"
   },
   {
     "company": "JR東日本",
@@ -88,7 +88,7 @@
     "line": "山手線",
     "station": "日暮里",
     "melody": "せせらぎ",
-    "file": "audio/せせらぎ.mp3"
+    "file": "audio/せせらぎ.mp3"
   },
   {
     "company": "JR東日本",
@@ -116,7 +116,7 @@
     "line": "山手線",
     "station": "田端",
     "melody": "せせらぎ",
-    "file": "audio/せせらぎ.mp3"
+    "file": "audio/せせらぎ.mp3"
   },
   {
     "company": "JR東日本",
@@ -144,7 +144,7 @@
     "line": "山手線",
     "station": "巣鴨",
     "melody": "せせらぎ",
-    "file": "audio/せせらぎ.mp3"
+    "file": "audio/せせらぎ.mp3"
   },
   {
     "company": "JR東日本",
@@ -158,35 +158,35 @@
     "line": "山手線",
     "station": "大塚",
     "melody": "せせらぎ",
-    "file": "audio/せせらぎ.mp3"
+    "file": "audio/せせらぎ.mp3"
   },
   {
     "company": "JR東日本",
     "line": "山手線",
     "station": "池袋",
     "melody": "ビックカメラテーマソング ver.A",
-    "file": "audio/ビックカメラの歌A.mp3"
+    "file": "audio/ビックカメラの歌A.mp3"
   },
   {
     "company": "JR東日本",
     "line": "山手線",
     "station": "池袋",
     "melody": "ビックカメラテーマソング ver.B",
-    "file": "audio/ビックカメラの歌B.mp3"
+    "file": "audio/ビックカメラの歌B.mp3"
   },
   {
     "company": "JR東日本",
     "line": "山手線",
     "station": "池袋",
     "melody": "ビックカメラテーマソング ver.C",
-    "file": "audio/ビックカメラの歌C.mp3"
+    "file": "audio/ビックカメラの歌C.mp3"
   },
   {
     "company": "JR東日本",
     "line": "山手線",
     "station": "池袋",
     "melody": "ビックカメラテーマソング ver.D",
-    "file": "audio/ビックカメラの歌D.mp3"
+    "file": "audio/ビックカメラの歌D.mp3"
   },
   {
     "company": "JR東日本",
@@ -200,7 +200,7 @@
     "line": "山手線",
     "station": "目白",
     "melody": "せせらぎ",
-    "file": "audio/せせらぎ.mp3"
+    "file": "audio/せせらぎ.mp3"
   },
   {
     "company": "JR東日本",
@@ -440,8 +440,7 @@
     "melody": "首都圏11-1番",
     "file": "audio/首都圏11-1番.mp3"
   },
-
-    {
+  {
     "company": "JR東日本",
     "line": "南武線",
     "station": "川崎",
@@ -530,14 +529,14 @@
     "line": "南武線",
     "station": "武蔵小杉",
     "melody": "ナンバーワン野郎A",
-    "file": "audio/ナンバーワン野郎A.mp3"
+    "file": "audio/ナンバーワン野郎A.mp3"
   },
   {
     "company": "JR東日本",
     "line": "南武線",
     "station": "武蔵小杉",
     "melody": "ナンバーワン野郎B",
-    "file": "audio/ナンバーワン野郎B.mp3"
+    "file": "audio/ナンバーワン野郎B.mp3"
   },
   {
     "company": "JR東日本",
@@ -579,21 +578,21 @@
     "line": "南武線",
     "station": "武蔵溝ノ口",
     "melody": "Jupiter ソプラノ",
-    "file": "audio/Jupiter ソプラノ.mp3"
+    "file": "audio/Jupiter ソプラノ.mp3"
   },
   {
     "company": "JR東日本",
     "line": "南武線",
     "station": "武蔵溝ノ口",
     "melody": "Jupiter 大サビ",
-    "file": "audio/Jupiter 大サビ.mp3"
+    "file": "audio/Jupiter 大サビ.mp3"
   },
   {
     "company": "JR東日本",
     "line": "南武線",
     "station": "津田山",
     "melody": "ホリデイA",
-    "file": "audio/ホリデイA.mp3"
+    "file": "audio/ホリデイA.mp3"
   },
   {
     "company": "JR東日本",
@@ -607,7 +606,7 @@
     "line": "南武線",
     "station": "久地",
     "melody": "ホリデイA",
-    "file": "audio/ホリデイA.mp3"
+    "file": "audio/ホリデイA.mp3"
   },
   {
     "company": "JR東日本",
@@ -621,7 +620,7 @@
     "line": "南武線",
     "station": "宿河原",
     "melody": "夢を叶えてドラえもん",
-    "file": "audio/夢を叶えてドラえもん.mp3"
+    "file": "audio/夢を叶えてドラえもん.mp3"
   },
   {
     "company": "JR東日本",
@@ -635,28 +634,28 @@
     "line": "南武線",
     "station": "登戸",
     "melody": "ドラえもんの歌",
-    "file": "audio/ドラえもんの歌.mp3"
+    "file": "audio/ドラえもんの歌.mp3"
   },
   {
     "company": "JR東日本",
     "line": "南武線",
     "station": "登戸",
     "melody": "僕ドラえもん",
-    "file": "audio/僕ドラえもん.mp3"
+    "file": "audio/僕ドラえもん.mp3"
   },
-    {
+  {
     "company": "JR東日本",
     "line": "南武線",
     "station": "登戸",
     "melody": "来てよパーマン",
-    "file": "audio/来てよパーマン.mp3"
+    "file": "audio/来てよパーマン.mp3"
   },
   {
     "company": "JR東日本",
     "line": "南武線",
     "station": "中野島",
     "melody": "ホリデイA",
-    "file": "audio/ホリデイA.mp3"
+    "file": "audio/ホリデイA.mp3"
   },
   {
     "company": "JR東日本",
@@ -712,7 +711,7 @@
     "line": "南武線",
     "station": "稲城長沼",
     "melody": "ホリデイA",
-    "file": "audio/ホリデイA.mp3"
+    "file": "audio/ホリデイA.mp3"
   },
   {
     "company": "JR東日本",
@@ -728,12 +727,12 @@
     "melody": "浜千鳥南武線",
     "file": "audio/浜千鳥南武線.mp3"
   },
-    {
+  {
     "company": "JR東日本",
     "line": "南武線",
     "station": "南多摩",
     "melody": "ホリデイA",
-    "file": "audio/ホリデイA.mp3"
+    "file": "audio/ホリデイA.mp3"
   },
   {
     "company": "JR東日本",
@@ -742,7 +741,6 @@
     "melody": "twilight",
     "file": "audio/Twilight.mp3"
   },
-  
   {
     "company": "JR東日本",
     "line": "南武線",
@@ -750,13 +748,12 @@
     "melody": "星空の下",
     "file": "audio/星空の下.mp3"
   },
-
-   {
+  {
     "company": "JR東日本",
     "line": "埼京線",
     "station": "羽沢横浜国大",
     "melody": "キッズステーション",
-    "file": "audio/キッズステーション.mp3"
+    "file": "audio/キッズステーション.mp3"
   },
   {
     "company": "JR東日本",
@@ -896,7 +893,7 @@
     "line": "埼京線",
     "station": "十条",
     "melody": "せせらぎ 旧永楽Ver",
-    "file": "audio/せせらぎ 旧永楽Ver.mp3"
+    "file": "audio/せせらぎ 旧永楽Ver.mp3"
   },
   {
     "company": "JR東日本",
@@ -924,7 +921,7 @@
     "line": "埼京線",
     "station": "北赤羽",
     "melody": "せせらぎ 高音Ver",
-    "file": "audio/せせらぎ 高音Ver.mp3"
+    "file": "audio/せせらぎ 高音Ver.mp3"
   },
   {
     "company": "JR東日本",
@@ -938,14 +935,14 @@
     "line": "埼京線",
     "station": "浮間舟渡",
     "melody": "せせらぎ 高音Ver",
-    "file": "audio/せせらぎ 高音Ver.mp3"
+    "file": "audio/せせらぎ 高音Ver.mp3"
   },
   {
     "company": "JR東日本",
     "line": "埼京線",
     "station": "戸田公園",
     "melody": "ああ わが戸田市",
-    "file": "audio/ああ わが戸田市.mp3"
+    "file": "audio/ああ わが戸田市.mp3"
   },
   {
     "company": "JR東日本",
@@ -959,7 +956,7 @@
     "line": "埼京線",
     "station": "戸田",
     "melody": "ああ わが戸田市",
-    "file": "audio/ああ わが戸田市.mp3"
+    "file": "audio/ああ わが戸田市.mp3"
   },
   {
     "company": "JR東日本",
@@ -973,7 +970,7 @@
     "line": "埼京線",
     "station": "北戸田",
     "melody": "ああ わが戸田市",
-    "file": "audio/ああ わが戸田市.mp3"
+    "file": "audio/ああ わが戸田市.mp3"
   },
   {
     "company": "JR東日本",
@@ -1087,7 +1084,6 @@
     "melody": "首都圏20-1番",
     "file": "audio/首都圏20-1番.mp3"
   },
-
   {
     "company": "JR東日本",
     "line": "東海道線",
@@ -1191,7 +1187,7 @@
     "line": "東海道線",
     "station": "品川",
     "melody": "ナイスガイ！",
-    "file": "audio/ナイスガイ！.mp3"
+    "file": "audio/ナイスガイ！.mp3"
   },
   {
     "company": "JR東日本",
@@ -1317,7 +1313,7 @@
     "line": "東海道線",
     "station": "平塚",
     "melody": "たなばたさま",
-    "file": "audio/たなばたさま.mp3"
+    "file": "audio/たなばたさま.mp3"
   },
   {
     "company": "JR東日本",
@@ -1366,7 +1362,7 @@
     "line": "東海道線",
     "station": "小田原",
     "melody": "お猿のかごや",
-    "file": "audio/お猿のかごや.mp3"
+    "file": "audio/お猿のかごや.mp3"
   },
   {
     "company": "JR東日本",
@@ -1455,815 +1451,717 @@
   {
     "company": "JR東日本",
     "line": "東海道線",
-    "station": "函南",
-    "melody": "夜を徹して麻雀さ",
-    "file": "audio/夜を徹して麻雀さ.mp3"
-  },
-  {
-    "company": "JR東日本",
-    "line": "東海道線",
-    "station": "三島",
-    "melody": "夜を徹して麻雀さ",
-    "file": "audio/夜を徹して麻雀さ.mp3"
-  },
-  {
-    "company": "JR東日本",
-    "line": "東海道線",
-    "station": "沼津",
-    "melody": "夜を徹して麻雀さ",
-    "file": "audio/夜を徹して麻雀さ.mp3"
-  },
-  {
-    "company": "JR東日本",
-    "line": "東海道線",
-    "station": "片浜",
-    "melody": "夜を徹して麻雀さ",
-    "file": "audio/夜を徹して麻雀さ.mp3"
-  },
-  {
-    "company": "JR東日本",
-    "line": "東海道線",
-    "station": "東田子の浦",
-    "melody": "夜を徹して麻雀さ",
-    "file": "audio/夜を徹して麻雀さ.mp3"
-  },
-  {
-    "company": "JR東日本",
-    "line": "東海道線",
-    "station": "吉原",
-    "melody": "夜を徹して麻雀さ",
-    "file": "audio/夜を徹して麻雀さ.mp3"
-  },
-  {
-    "company": "JR東日本",
-    "line": "東海道線",
-    "station": "富士",
-    "melody": "夜を徹して麻雀さ",
-    "file": "audio/夜を徹して麻雀さ.mp3"
-  },
-  {
-    "company": "JR東日本",
-    "line": "東海道線",
-    "station": "富士川",
-    "melody": "夜を徹して麻雀さ",
-    "file": "audio/夜を徹して麻雀さ.mp3"
-  },
-  {
-    "company": "JR東日本",
-    "line": "東海道線",
-    "station": "新蒲原",
-    "melody": "夜を徹して麻雀さ",
-    "file": "audio/夜を徹して麻雀さ.mp3"
-  },
-  {
-    "company": "JR東日本",
-    "line": "東海道線",
-    "station": "蒲原",
-    "melody": "夜を徹して麻雀さ",
-    "file": "audio/夜を徹して麻雀さ.mp3"
-  },
-  {
-    "company": "JR東日本",
-    "line": "東海道線",
-    "station": "由伊",
-    "melody": "夜を徹して麻雀さ",
-    "file": "audio/夜を徹して麻雀さ.mp3"
-  },
-  {
-    "company": "JR東日本",
-    "line": "東海道線",
-    "station": "清水",
-    "melody": "夜を徹して麻雀さ",
-    "file": "audio/夜を徹して麻雀さ.mp3"
-  },
-  {
-    "company": "JR東日本",
-    "line": "東海道線",
-    "station": "草薙",
-    "melody": "夜を徹して麻雀さ",
-    "file": "audio/夜を徹して麻雀さ.mp3"
-  },
-  {
-    "company": "JR東日本",
-    "line": "東海道線",
-    "station": "東静岡",
-    "melody": "夜を徹して麻雀さ",
-    "file": "audio/夜を徹して麻雀さ.mp3"
-  },
-  {
-    "company": "JR東日本",
-    "line": "東海道線",
     "station": "静岡",
     "melody": "ベル",
-    "file": "audio/ベル.mp3"
+    "file": "audio/ベル.mp3"
   },
   {
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "久里浜",
-  "melody": "首都圏4番",
-  "file": "audio/首都圏4番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "久里浜",
-  "melody": "首都圏4-1番",
-  "file": "audio/首都圏4-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "衣笠",
-  "melody": "首都圏4番",
-  "file": "audio/首都圏4番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "横須賀",
-  "melody": "首都圏4-1番",
-  "file": "audio/首都圏4-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "横須賀",
-  "melody": "首都圏4-2番",
-  "file": "audio/首都圏4-2番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "田浦",
-  "melody": "首都圏4番",
-  "file": "audio/首都圏4番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "田浦",
-  "melody": "首都圏4-1番",
-  "file": "audio/首都圏4-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "東逗子",
-  "melody": "首都圏4番",
-  "file": "audio/首都圏4番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "東逗子",
-  "melody": "首都圏4-1番",
-  "file": "audio/首都圏4-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "逗子",
-  "melody": "首都圏4番",
-  "file": "audio/首都圏4番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "逗子",
-  "melody": "首都圏4-1番",
-  "file": "audio/首都圏4-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "逗子",
-  "melody": "首都圏16番",
-  "file": "audio/首都圏16番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "鎌倉",
-  "melody": "首都圏4番",
-  "file": "audio/首都圏4番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "鎌倉",
-  "melody": "首都圏4-1番",
-  "file": "audio/首都圏4-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "北鎌倉",
-  "melody": "首都圏4番",
-  "file": "audio/首都圏4番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "北鎌倉",
-  "melody": "首都圏4-1番",
-  "file": "audio/首都圏4-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "大船",
-  "melody": "Cielo Estrellado",
-  "file": "audio/Cielo Estrellado.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "大船",
-  "melody": "Gota del Vient",
-  "file": "audio/Gota del Vient.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "戸塚",
-  "melody": "首都圏4番",
-  "file": "audio/首都圏4番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "戸塚",
-  "melody": "首都圏4-1番",
-  "file": "audio/首都圏4-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "東戸塚",
-  "melody": "首都圏4番",
-  "file": "audio/首都圏4番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "東戸塚",
-  "melody": "首都圏4-1番",
-  "file": "audio/首都圏4-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "保土ケ谷",
-  "melody": "首都圏4番",
-  "file": "audio/首都圏4番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "保土ケ谷",
-  "melody": "首都圏4-1番",
-  "file": "audio/首都圏4-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "横浜",
-  "melody": "首都圏4番",
-  "file": "audio/首都圏4番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "横浜",
-  "melody": "首都圏4-1番",
-  "file": "audio/首都圏4-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "新川崎",
-  "melody": "首都圏4番",
-  "file": "audio/首都圏4番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "新川崎",
-  "melody": "首都圏4-1番",
-  "file": "audio/首都圏4-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "武蔵小杉",
-  "melody": "首都圏4番",
-  "file": "audio/首都圏4番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "武蔵小杉",
-  "melody": "首都圏4-1番",
-  "file": "audio/首都圏4-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "西大井",
-  "melody": "首都圏4番",
-  "file": "audio/首都圏4番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "西大井",
-  "melody": "首都圏4-1番",
-  "file": "audio/首都圏4-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "品川",
-  "melody": "春(強調トレモロ)",
-  "file": "audio/春(強調トレモロ).mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "品川",
-  "melody": "せせらぎ(鐘強調)",
-  "file": "audio/せせらぎ(鐘強調).mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "品川",
-  "melody": "首都圏4番",
-  "file": "audio/首都圏4番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "新橋",
-  "melody": "首都圏4番",
-  "file": "audio/首都圏4番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "新橋",
-  "melody": "首都圏4-1番",
-  "file": "audio/首都圏4-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "東京",
-  "melody": "首都圏4番",
-  "file": "audio/首都圏4番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "東京",
-  "melody": "首都圏13番",
-  "file": "audio/首都圏13番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "東京",
-  "melody": "首都圏13-1番",
-  "file": "audio/首都圏13-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "横須賀線",
-  "station": "東京",
-  "melody": "首都圏4-1番",
-  "file": "audio/首都圏4-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "総武快速線",
-  "station": "東京",
-  "melody": "首都圏4番",
-  "file": "audio/首都圏4番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "総武快速線",
-  "station": "東京",
-  "melody": "首都圏13番",
-  "file": "audio/首都圏13番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "総武快速線",
-  "station": "東京",
-  "melody": "首都圏13-1番",
-  "file": "audio/首都圏13-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "総武快速線",
-  "station": "東京",
-  "melody": "首都圏4-1番",
-  "file": "audio/首都圏4-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "総武快速線",
-  "station": "新日本橋",
-  "melody": "首都圏4番",
-  "file": "audio/首都圏4番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "総武快速線",
-  "station": "新日本橋",
-  "melody": "首都圏4-1番",
-  "file": "audio/首都圏4-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "総武快速線",
-  "station": "馬喰町",
-  "melody": "首都圏4番",
-  "file": "audio/首都圏4番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "総武快速線",
-  "station": "馬喰町",
-  "melody": "首都圏4-1番",
-  "file": "audio/首都圏4-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "総武快速線",
-  "station": "錦糸町",
-  "melody": "首都圏4番",
-  "file": "audio/首都圏4番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "総武快速線",
-  "station": "錦糸町",
-  "melody": "首都圏4-1番",
-  "file": "audio/首都圏4-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "総武快速線",
-  "station": "新小岩",
-  "melody": "首都圏4番",
-  "file": "audio/首都圏4番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "総武快速線",
-  "station": "新小岩",
-  "melody": "首都圏4-1番",
-  "file": "audio/首都圏4-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "総武快速線",
-  "station": "市川",
-  "melody": "首都圏4番",
-  "file": "audio/首都圏4番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "総武快速線",
-  "station": "市川",
-  "melody": "首都圏4-1番",
-  "file": "audio/首都圏4-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "総武快速線",
-  "station": "船橋",
-  "melody": "首都圏4番",
-  "file": "audio/首都圏4番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "総武快速線",
-  "station": "船橋",
-  "melody": "首都圏4-1番",
-  "file": "audio/首都圏4-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "総武快速線",
-  "station": "津田沼",
-  "melody": "首都圏16-2番",
-  "file": "audio/首都圏16-2番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "総武快速線",
-  "station": "津田沼",
-  "melody": "首都圏4-1番",
-  "file": "audio/首都圏4-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "総武快速線",
-  "station": "津田沼",
-  "melody": "首都圏13番",
-  "file": "audio/首都圏13番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "総武快速線",
-  "station": "津田沼",
-  "melody": "首都圏13-1番",
-  "file": "audio/首都圏13-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "総武快速線",
-  "station": "津田沼",
-  "melody": "首都圏4番",
-  "file": "audio/首都圏4番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "総武快速線",
-  "station": "稲毛",
-  "melody": "首都圏4番",
-  "file": "audio/首都圏4番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "総武快速線",
-  "station": "稲毛",
-  "melody": "首都圏4-1番",
-  "file": "audio/首都圏4-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "大船",
-  "melody": "Cielo Estrellado(半音低い)",
-  "file": "audio/Cielo Estrellado(半音低い).mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "大船",
-  "melody": "Cielo Estrellado",
-  "file": "audio/Cielo Estrellado.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "大船",
-  "melody": "Gota del Vient(やや低い)",
-  "file": "audio/Gota del Vient.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "大船",
-  "melody": "Gota del Vient",
-  "file": "audio/Gota del Vient.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "戸塚",
-  "melody": "首都圏4番",
-  "file": "audio/首都圏4番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "戸塚",
-  "melody": "首都圏4-1番",
-  "file": "audio/首都圏4-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "東戸塚",
-  "melody": "首都圏4番",
-  "file": "audio/首都圏4番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "東戸塚",
-  "melody": "首都圏4-1番",
-  "file": "audio/首都圏4-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "保土ケ谷",
-  "melody": "首都圏4番",
-  "file": "audio/首都圏4番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "保土ケ谷",
-  "melody": "首都圏4-1番",
-  "file": "audio/首都圏4-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "横浜",
-  "melody": "首都圏4番",
-  "file": "audio/首都圏4番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "横浜",
-  "melody": "首都圏4-1番",
-  "file": "audio/首都圏4-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "新川崎",
-  "melody": "首都圏4番",
-  "file": "audio/首都圏4番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "新川崎",
-  "melody": "首都圏4-1番",
-  "file": "audio/首都圏4-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "武蔵小杉",
-  "melody": "首都圏4番",
-  "file": "audio/首都圏4番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "武蔵小杉",
-  "melody": "首都圏4-1番",
-  "file": "audio/首都圏4-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "西大井",
-  "melody": "首都圏4番",
-  "file": "audio/首都圏4番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "西大井",
-  "melody": "首都圏4-1番",
-  "file": "audio/首都圏4-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "大崎",
-  "melody": "首都圏19番",
-  "file": "audio/首都圏19番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "大崎",
-  "melody": "首都圏19-1番",
-  "file": "audio/首都圏19-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "恵比寿",
-  "melody": "第三の男H",
-  "file": "audio/第三の男H.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "恵比寿",
-  "melody": "第三の男G",
-  "file": "audio/第三の男G.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "渋谷",
-  "melody": "首都圏5番",
-  "file": "audio/首都圏5番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "渋谷",
-  "melody": "首都圏5-1番",
-  "file": "audio/首都圏5-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "新宿",
-  "melody": "首都圏5番",
-  "file": "audio/首都圏5番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "新宿",
-  "melody": "首都圏3番",
-  "file": "audio/首都圏3番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "池袋",
-  "melody": "首都圏19番",
-  "file": "audio/首都圏19番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "池袋",
-  "melody": "首都圏19-1番",
-  "file": "audio/首都圏19-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "赤羽",
-  "melody": "俺たちの明日",
-  "file": "audio/俺たちの明日.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "赤羽",
-  "melody": "今宵の月のように",
-  "file": "audio/今宵の月のように.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "浦和",
-  "melody": "首都圏19番",
-  "file": "audio/首都圏19番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "浦和",
-  "melody": "首都圏19-1番",
-  "file": "audio/首都圏19-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "大宮",
-  "melody": "首都圏19番",
-  "file": "audio/首都圏19番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "大宮",
-  "melody": "首都圏3番",
-  "file": "audio/首都圏3番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "大宮",
-  "melody": "首都圏6番",
-  "file": "audio/首都圏6番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "大宮",
-  "melody": "首都圏16-1番",
-  "file": "audio/首都圏16-1番.mp3"
-},
-{
-  "company": "JR東日本",
-  "line": "湘南新宿ライン",
-  "station": "大宮",
-  "melody": "首都圏19-1番",
-  "file": "audio/首都圏19-1番.mp3"
-},
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "久里浜",
+    "melody": "首都圏4番",
+    "file": "audio/首都圏4番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "久里浜",
+    "melody": "首都圏4-1番",
+    "file": "audio/首都圏4-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "衣笠",
+    "melody": "首都圏4番",
+    "file": "audio/首都圏4番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "横須賀",
+    "melody": "首都圏4-1番",
+    "file": "audio/首都圏4-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "横須賀",
+    "melody": "首都圏4-2番",
+    "file": "audio/首都圏4-2番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "田浦",
+    "melody": "首都圏4番",
+    "file": "audio/首都圏4番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "田浦",
+    "melody": "首都圏4-1番",
+    "file": "audio/首都圏4-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "東逗子",
+    "melody": "首都圏4番",
+    "file": "audio/首都圏4番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "東逗子",
+    "melody": "首都圏4-1番",
+    "file": "audio/首都圏4-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "逗子",
+    "melody": "首都圏4番",
+    "file": "audio/首都圏4番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "逗子",
+    "melody": "首都圏4-1番",
+    "file": "audio/首都圏4-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "逗子",
+    "melody": "首都圏16番",
+    "file": "audio/首都圏16番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "鎌倉",
+    "melody": "首都圏4番",
+    "file": "audio/首都圏4番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "鎌倉",
+    "melody": "首都圏4-1番",
+    "file": "audio/首都圏4-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "北鎌倉",
+    "melody": "首都圏4番",
+    "file": "audio/首都圏4番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "北鎌倉",
+    "melody": "首都圏4-1番",
+    "file": "audio/首都圏4-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "大船",
+    "melody": "Cielo Estrellado",
+    "file": "audio/Cielo Estrellado.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "大船",
+    "melody": "Gota del Vient",
+    "file": "audio/Gota del Vient.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "戸塚",
+    "melody": "首都圏4番",
+    "file": "audio/首都圏4番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "戸塚",
+    "melody": "首都圏4-1番",
+    "file": "audio/首都圏4-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "東戸塚",
+    "melody": "首都圏4番",
+    "file": "audio/首都圏4番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "東戸塚",
+    "melody": "首都圏4-1番",
+    "file": "audio/首都圏4-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "保土ケ谷",
+    "melody": "首都圏4番",
+    "file": "audio/首都圏4番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "保土ケ谷",
+    "melody": "首都圏4-1番",
+    "file": "audio/首都圏4-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "横浜",
+    "melody": "首都圏4番",
+    "file": "audio/首都圏4番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "横浜",
+    "melody": "首都圏4-1番",
+    "file": "audio/首都圏4-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "新川崎",
+    "melody": "首都圏4番",
+    "file": "audio/首都圏4番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "新川崎",
+    "melody": "首都圏4-1番",
+    "file": "audio/首都圏4-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "武蔵小杉",
+    "melody": "首都圏4番",
+    "file": "audio/首都圏4番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "武蔵小杉",
+    "melody": "首都圏4-1番",
+    "file": "audio/首都圏4-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "西大井",
+    "melody": "首都圏4番",
+    "file": "audio/首都圏4番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "西大井",
+    "melody": "首都圏4-1番",
+    "file": "audio/首都圏4-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "品川",
+    "melody": "春(強調トレモロ)",
+    "file": "audio/春(強調トレモロ).mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "品川",
+    "melody": "せせらぎ(鐘強調)",
+    "file": "audio/せせらぎ(鐘強調).mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "品川",
+    "melody": "首都圏4番",
+    "file": "audio/首都圏4番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "新橋",
+    "melody": "首都圏4番",
+    "file": "audio/首都圏4番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "新橋",
+    "melody": "首都圏4-1番",
+    "file": "audio/首都圏4-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "東京",
+    "melody": "首都圏4番",
+    "file": "audio/首都圏4番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "東京",
+    "melody": "首都圏13番",
+    "file": "audio/首都圏13番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "東京",
+    "melody": "首都圏13-1番",
+    "file": "audio/首都圏13-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "横須賀線",
+    "station": "東京",
+    "melody": "首都圏4-1番",
+    "file": "audio/首都圏4-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "総武快速線",
+    "station": "東京",
+    "melody": "首都圏4番",
+    "file": "audio/首都圏4番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "総武快速線",
+    "station": "東京",
+    "melody": "首都圏13番",
+    "file": "audio/首都圏13番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "総武快速線",
+    "station": "東京",
+    "melody": "首都圏13-1番",
+    "file": "audio/首都圏13-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "総武快速線",
+    "station": "東京",
+    "melody": "首都圏4-1番",
+    "file": "audio/首都圏4-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "総武快速線",
+    "station": "新日本橋",
+    "melody": "首都圏4番",
+    "file": "audio/首都圏4番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "総武快速線",
+    "station": "新日本橋",
+    "melody": "首都圏4-1番",
+    "file": "audio/首都圏4-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "総武快速線",
+    "station": "馬喰町",
+    "melody": "首都圏4番",
+    "file": "audio/首都圏4番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "総武快速線",
+    "station": "馬喰町",
+    "melody": "首都圏4-1番",
+    "file": "audio/首都圏4-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "総武快速線",
+    "station": "錦糸町",
+    "melody": "首都圏4番",
+    "file": "audio/首都圏4番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "総武快速線",
+    "station": "錦糸町",
+    "melody": "首都圏4-1番",
+    "file": "audio/首都圏4-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "総武快速線",
+    "station": "新小岩",
+    "melody": "首都圏4番",
+    "file": "audio/首都圏4番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "総武快速線",
+    "station": "新小岩",
+    "melody": "首都圏4-1番",
+    "file": "audio/首都圏4-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "総武快速線",
+    "station": "市川",
+    "melody": "首都圏4番",
+    "file": "audio/首都圏4番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "総武快速線",
+    "station": "市川",
+    "melody": "首都圏4-1番",
+    "file": "audio/首都圏4-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "総武快速線",
+    "station": "船橋",
+    "melody": "首都圏4番",
+    "file": "audio/首都圏4番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "総武快速線",
+    "station": "船橋",
+    "melody": "首都圏4-1番",
+    "file": "audio/首都圏4-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "総武快速線",
+    "station": "津田沼",
+    "melody": "首都圏16-2番",
+    "file": "audio/首都圏16-2番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "総武快速線",
+    "station": "津田沼",
+    "melody": "首都圏4-1番",
+    "file": "audio/首都圏4-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "総武快速線",
+    "station": "津田沼",
+    "melody": "首都圏13番",
+    "file": "audio/首都圏13番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "総武快速線",
+    "station": "津田沼",
+    "melody": "首都圏13-1番",
+    "file": "audio/首都圏13-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "総武快速線",
+    "station": "津田沼",
+    "melody": "首都圏4番",
+    "file": "audio/首都圏4番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "総武快速線",
+    "station": "稲毛",
+    "melody": "首都圏4番",
+    "file": "audio/首都圏4番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "総武快速線",
+    "station": "稲毛",
+    "melody": "首都圏4-1番",
+    "file": "audio/首都圏4-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "大船",
+    "melody": "Cielo Estrellado(半音低い)",
+    "file": "audio/Cielo Estrellado(半音低い).mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "大船",
+    "melody": "Cielo Estrellado",
+    "file": "audio/Cielo Estrellado.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "大船",
+    "melody": "Gota del Vient(やや低い)",
+    "file": "audio/Gota del Vient.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "大船",
+    "melody": "Gota del Vient",
+    "file": "audio/Gota del Vient.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "戸塚",
+    "melody": "首都圏4番",
+    "file": "audio/首都圏4番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "戸塚",
+    "melody": "首都圏4-1番",
+    "file": "audio/首都圏4-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "東戸塚",
+    "melody": "首都圏4番",
+    "file": "audio/首都圏4番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "東戸塚",
+    "melody": "首都圏4-1番",
+    "file": "audio/首都圏4-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "保土ケ谷",
+    "melody": "首都圏4番",
+    "file": "audio/首都圏4番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "保土ケ谷",
+    "melody": "首都圏4-1番",
+    "file": "audio/首都圏4-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "横浜",
+    "melody": "首都圏4番",
+    "file": "audio/首都圏4番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "横浜",
+    "melody": "首都圏4-1番",
+    "file": "audio/首都圏4-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "新川崎",
+    "melody": "首都圏4番",
+    "file": "audio/首都圏4番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "新川崎",
+    "melody": "首都圏4-1番",
+    "file": "audio/首都圏4-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "武蔵小杉",
+    "melody": "首都圏4番",
+    "file": "audio/首都圏4番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "武蔵小杉",
+    "melody": "首都圏4-1番",
+    "file": "audio/首都圏4-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "西大井",
+    "melody": "首都圏4番",
+    "file": "audio/首都圏4番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "西大井",
+    "melody": "首都圏4-1番",
+    "file": "audio/首都圏4-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "大崎",
+    "melody": "首都圏19番",
+    "file": "audio/首都圏19番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "大崎",
+    "melody": "首都圏19-1番",
+    "file": "audio/首都圏19-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "恵比寿",
+    "melody": "第三の男H",
+    "file": "audio/第三の男H.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "恵比寿",
+    "melody": "第三の男G",
+    "file": "audio/第三の男G.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "渋谷",
+    "melody": "首都圏5番",
+    "file": "audio/首都圏5番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "渋谷",
+    "melody": "首都圏5-1番",
+    "file": "audio/首都圏5-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "新宿",
+    "melody": "首都圏5番",
+    "file": "audio/首都圏5番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "新宿",
+    "melody": "首都圏3番",
+    "file": "audio/首都圏3番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "池袋",
+    "melody": "首都圏19番",
+    "file": "audio/首都圏19番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "池袋",
+    "melody": "首都圏19-1番",
+    "file": "audio/首都圏19-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "赤羽",
+    "melody": "俺たちの明日",
+    "file": "audio/俺たちの明日.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "赤羽",
+    "melody": "今宵の月のように",
+    "file": "audio/今宵の月のように.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "浦和",
+    "melody": "首都圏19番",
+    "file": "audio/首都圏19番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "浦和",
+    "melody": "首都圏19-1番",
+    "file": "audio/首都圏19-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "大宮",
+    "melody": "首都圏19番",
+    "file": "audio/首都圏19番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "大宮",
+    "melody": "首都圏3番",
+    "file": "audio/首都圏3番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "大宮",
+    "melody": "首都圏6番",
+    "file": "audio/首都圏6番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "大宮",
+    "melody": "首都圏16-1番",
+    "file": "audio/首都圏16-1番.mp3"
+  },
+  {
+    "company": "JR東日本",
+    "line": "湘南新宿ライン",
+    "station": "大宮",
+    "melody": "首都圏19-1番",
+    "file": "audio/首都圏19-1番.mp3"
+  },
   {
     "company": "JR東日本",
     "line": "京浜東北線",
@@ -2864,14 +2762,14 @@
     "line": "中央線快速",
     "station": "阿佐ケ谷",
     "melody": "たなばたさま Ver.D",
-    "file": "audio/たなばたさま Ver.D.mp3"
+    "file": "audio/たなばたさま Ver.D.mp3"
   },
   {
     "company": "JR東日本",
     "line": "中央線快速",
     "station": "阿佐ケ谷",
     "melody": "たなばたさま Ver.C",
-    "file": "audio/たなばたさま Ver.C.mp3"
+    "file": "audio/たなばたさま Ver.C.mp3"
   },
   {
     "company": "JR東日本",
@@ -2920,14 +2818,14 @@
     "line": "中央線快速",
     "station": "三鷹",
     "melody": "めだかの学校A",
-    "file": "audio/めだかの学校A.mp3"
+    "file": "audio/めだかの学校A.mp3"
   },
   {
     "company": "JR東日本",
     "line": "中央線快速",
     "station": "三鷹",
     "melody": "めだかの学校B",
-    "file": "audio/めだかの学校B.mp3"
+    "file": "audio/めだかの学校B.mp3"
   },
   {
     "company": "JR東日本",
@@ -2976,14 +2874,14 @@
     "line": "中央線快速",
     "station": "国分寺",
     "melody": "電車ごっこD",
-    "file": "audio/電車ごっこD.mp3"
+    "file": "audio/電車ごっこD.mp3"
   },
   {
     "company": "JR東日本",
     "line": "中央線快速",
     "station": "国分寺",
     "melody": "電車ごっこA",
-    "file": "audio/電車ごっこA.mp3"
+    "file": "audio/電車ごっこA.mp3"
   },
   {
     "company": "JR東日本",
@@ -3097,19 +2995,19 @@
     "melody": "首都圏9番",
     "file": "audio/首都圏9番.mp3"
   },
-    {
+  {
     "company": "JR東日本",
     "line": "中央・総武線各駅停車",
     "station": "三鷹",
     "melody": "めだかの学校C",
-    "file": "audio/めだかの学校C.mp3"
+    "file": "audio/めだかの学校C.mp3"
   },
   {
     "company": "JR東日本",
     "line": "中央・総武線各駅停車",
     "station": "三鷹",
     "melody": "めだかの学校D",
-    "file": "audio/めだかの学校D.mp3"
+    "file": "audio/めだかの学校D.mp3"
   },
   {
     "company": "JR東日本",
@@ -3158,14 +3056,14 @@
     "line": "中央・総武線各駅停車",
     "station": "阿佐ケ谷",
     "melody": "たなばたさまA",
-    "file": "audio/たなばたさまA.mp3"
+    "file": "audio/たなばたさまA.mp3"
   },
   {
     "company": "JR東日本",
     "line": "中央・総武線各駅停車",
     "station": "阿佐ケ谷",
     "melody": "たなばたさま B",
-    "file": "audio/たなばたさま B.mp3"
+    "file": "audio/たなばたさま B.mp3"
   },
   {
     "company": "JR東日本",
@@ -3293,7 +3191,7 @@
     "melody": "首都圏10-3番",
     "file": "audio/首都圏10-3番.mp3"
   },
-    {
+  {
     "company": "JR東日本",
     "line": "京葉線",
     "station": "東京",
@@ -3809,7 +3707,7 @@
     "line": "武蔵野線",
     "station": "南流山",
     "melody": "パシフィック",
-    "file": "audio/パシフィック.mp3"
+    "file": "audio/パシフィック.mp3"
   },
   {
     "company": "JR東日本",
@@ -3916,7 +3814,7 @@
     "melody": "首都圏18-1番",
     "file": "audio/首都圏18-1番.mp3"
   },
-    {
+  {
     "company": "JR東日本",
     "line": "常磐線快速",
     "station": "上野",
@@ -4019,7 +3917,7 @@
     "line": "常磐線快速",
     "station": "北千住",
     "melody": "陽だまりV2",
-    "file": "audio/陽だまりV2.mp3"
+    "file": "audio/陽だまりV2.mp3"
   },
   {
     "company": "JR東日本",
@@ -4173,7 +4071,7 @@
     "line": "常磐線",
     "station": "龍ケ崎市",
     "melody": "RYUとぴあ音頭",
-    "file": "audio/RYUとぴあ音頭.mp3"
+    "file": "audio/RYUとぴあ音頭.mp3"
   },
   {
     "company": "JR東日本",
@@ -4194,14 +4092,14 @@
     "line": "常磐線",
     "station": "牛久",
     "melody": "オー・シャンゼリゼ",
-    "file": "audio/オー・シャンゼリゼ.mp3"
+    "file": "audio/オー・シャンゼリゼ.mp3"
   },
   {
     "company": "JR東日本",
     "line": "常磐線",
     "station": "牛久",
     "melody": "グリーン・グリーン",
-    "file": "audio/グリーン・グリーン.mp3"
+    "file": "audio/グリーン・グリーン.mp3"
   },
   {
     "company": "JR東日本",
@@ -4278,14 +4176,14 @@
     "line": "常磐線",
     "station": "石岡",
     "melody": "ここで君を待ってるよ",
-    "file": "audio/ここで君を待ってるよ.mp3"
+    "file": "audio/ここで君を待ってるよ.mp3"
   },
   {
     "company": "JR東日本",
     "line": "常磐線",
     "station": "石岡",
     "melody": "バラが咲いた",
-    "file": "audio/バラが咲いた.mp3"
+    "file": "audio/バラが咲いた.mp3"
   },
   {
     "company": "JR東日本",
@@ -4320,7 +4218,7 @@
     "line": "常磐線",
     "station": "岩間",
     "melody": "レットキス(ジェンカ)",
-    "file": "audio/レットキス(ジェンカ).mp3"
+    "file": "audio/レットキス(ジェンカ).mp3"
   },
   {
     "company": "JR東日本",
@@ -4334,7 +4232,7 @@
     "line": "常磐線",
     "station": "友部",
     "melody": "明日があるさ",
-    "file": "audio/明日があるさ.mp3"
+    "file": "audio/明日があるさ.mp3"
   },
   {
     "company": "JR東日本",
@@ -4376,7 +4274,7 @@
     "line": "常磐線",
     "station": "水戸",
     "melody": "大都会の雑踏の中で聞こえるチャイム",
-    "file": "audio/大都会の雑踏の中で聞こえるチャイム.mp3"
+    "file": "audio/大都会の雑踏の中で聞こえるチャイム.mp3"
   },
   {
     "company": "JR東日本",
@@ -4390,7 +4288,7 @@
     "line": "常磐線",
     "station": "水戸",
     "melody": "太平洋の海岸での生命の誕生",
-    "file": "audio/太平洋の海岸での生命の誕生.mp3"
+    "file": "audio/太平洋の海岸での生命の誕生.mp3"
   },
   {
     "company": "JR東日本",
@@ -4439,7 +4337,7 @@
     "line": "常磐線",
     "station": "大甕",
     "melody": "いつでも夢をV1",
-    "file": "audio/いつでも夢をV1.mp3"
+    "file": "audio/いつでも夢をV1.mp3"
   },
   {
     "company": "JR東日本",
@@ -4453,7 +4351,7 @@
     "line": "常磐線",
     "station": "常陸多賀",
     "melody": "いつでも夢をV1",
-    "file": "audio/いつでも夢をV1.mp3"
+    "file": "audio/いつでも夢をV1.mp3"
   },
   {
     "company": "JR東日本",
@@ -4467,7 +4365,7 @@
     "line": "常磐線",
     "station": "日立",
     "melody": "いつでも夢をV1",
-    "file": "audio/いつでも夢をV1.mp3"
+    "file": "audio/いつでも夢をV1.mp3"
   },
   {
     "company": "JR東日本",
@@ -4481,7 +4379,7 @@
     "line": "常磐線",
     "station": "小木津",
     "melody": "いつでも夢をV2",
-    "file": "audio/いつでも夢をV2.mp3"
+    "file": "audio/いつでも夢をV2.mp3"
   },
   {
     "company": "JR東日本",
@@ -4495,7 +4393,7 @@
     "line": "常磐線",
     "station": "十王",
     "melody": "いつでも夢をV2",
-    "file": "audio/いつでも夢をV2.mp3"
+    "file": "audio/いつでも夢をV2.mp3"
   },
   {
     "company": "JR東日本",
@@ -4572,7 +4470,7 @@
     "line": "常磐線",
     "station": "湯本",
     "melody": "シャボン玉",
-    "file": "audio/シャボン玉.mp3"
+    "file": "audio/シャボン玉.mp3"
   },
   {
     "company": "JR東日本",
@@ -4593,7 +4491,7 @@
     "line": "常磐線",
     "station": "いわき",
     "melody": "フラガール～虹を～",
-    "file": "audio/フラガール～虹を～.mp3"
+    "file": "audio/フラガール～虹を～.mp3"
   },
   {
     "company": "JR東日本",
@@ -4610,4 +4508,3 @@
     "file": "audio/春の歌.mp3"
   }
 ]
-

@@ -136,7 +136,7 @@ function render(data) {
       audioSrc = 'audio/' + audioSrc;
     }
     // Make station name clickable, linking to /stations/[station].html
-    const stationLink = `<a href="/stations/${encodeURIComponent(entry.station)}.html" style="color:#1976d2;text-decoration:underline;font-weight:700;">${entry.station}</a>`;
+    const stationLink = `<a href="stations/${encodeURIComponent(entry.station)}.html" style="color:#1976d2;text-decoration:underline;font-weight:700;">${entry.station}</a>`;
     div.innerHTML = `
       <strong>${stationLink}</strong>（${entry.line}、${entry.company}）<br>
       <em>${entry.melody}</em><br>

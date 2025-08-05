@@ -153,35 +153,27 @@ document.addEventListener('DOMContentLoaded', function() {
   <p>ご利用ありがとうございます。</p>
   <p>鉄道モバイル: https://www.te2do.jp.</p>
 </footer>
-<!-- Firebase App -->
- <script>
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+<!-- Firebase App (must be before other Firebase scripts) -->
+ <!-- Firebase and other scripts -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+  <script>
+    // Initialize Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyBrgf00OFxksjZuFOQxgB1qUjZmLSG7yqk",
+      authDomain: "dokodemo-ekimero.firebaseapp.com",
+      databaseURL: "https://dokodemo-ekimero-default-rtdb.firebaseio.com",
+      projectId: "dokodemo-ekimero",
+      storageBucket: "dokodemo-ekimero.firebasestorage.app",
+      messagingSenderId: "189766315545",
+      appId: "1:189766315545:web:e88fb50dc039f7d2f28488",
+      measurementId: "G-EPCBNCPN4F"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  
+  <!-- Add playcounter.js -->
+  <script src="playcounter.js"></script>
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyBrgf00OFxksjZuFOQxgB1qUjZmLSG7yqk",
-  authDomain: "dokodemo-ekimero.firebaseapp.com",
-  databaseURL: "https://dokodemo-ekimero-default-rtdb.firebaseio.com",
-  projectId: "dokodemo-ekimero",
-  storageBucket: "dokodemo-ekimero.firebasestorage.app",
-  messagingSenderId: "189766315545",
-  appId: "1:189766315545:web:e88fb50dc039f7d2f28488",
-  measurementId: "G-EPCBNCPN4F"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-
-
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  const db = firebase.database();
-</script>
 </body>
 </html>

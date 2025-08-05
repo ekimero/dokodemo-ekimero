@@ -30,19 +30,4 @@ fetch('/dokodemo-ekimero/stations.json')
         <span style="font-size:0.95em;color:#555;">${stationLink} / ${st.company} / ${st.line}</span>
       </div>`;
     }).join('');
-
-function incrementGlobalPlayCount() {
-  if (!window.db) return; // db not initialized yet?
-
-  const counterRef = window.db.ref("totalPlays");
-  counterRef.transaction(current => (current || 0) + 1);
-}
-
-// In your play button handler:
-button.addEventListener("click", () => {
-  const audio = new Audio(file);
-  audio.play();
-
-  incrementGlobalPlayCount();
-});
   });

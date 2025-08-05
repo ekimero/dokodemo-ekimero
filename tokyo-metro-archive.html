@@ -117,29 +117,25 @@ document.addEventListener('DOMContentLoaded', function() {
 </footer>
 <!-- Add these inside your HTML file (e.g. in <head> or before </body>) -->
 
-<!-- Firebase App (the core SDK) -->
-<script src="https://www.gstatic.com/firebasejs/9.24.0/firebase-app-compat.js"></script>
-
-<!-- Firebase Realtime Database -->
-<script src="https://www.gstatic.com/firebasejs/9.24.0/firebase-database-compat.js"></script>
-
-<script>
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyBrgf00OFxksjZuFOQxgB1qUjZmLSG7yqk",
-    authDomain: "dokodemo-ekimero.firebaseapp.com",
-    databaseURL: "https://dokodemo-ekimero-default-rtdb.firebaseio.com",
-    projectId: "dokodemo-ekimero",
-    storageBucket: "dokodemo-ekimero.firebasestorage.app",
-    messagingSenderId: "189766315545",
-    appId: "1:189766315545:web:e88fb50dc039f7d2f28488",
-    measurementId: "G-EPCBNCPN4F"
-  };
-
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  const db = firebase.database();
-</script>
+ <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+  <script>
+    // Initialize Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyBrgf00OFxksjZuFOQxgB1qUjZmLSG7yqk",
+      authDomain: "dokodemo-ekimero.firebaseapp.com",
+      databaseURL: "https://dokodemo-ekimero-default-rtdb.firebaseio.com",
+      projectId: "dokodemo-ekimero",
+      storageBucket: "dokodemo-ekimero.firebasestorage.app",
+      messagingSenderId: "189766315545",
+      appId: "1:189766315545:web:e88fb50dc039f7d2f28488",
+      measurementId: "G-EPCBNCPN4F"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  
+  <!-- Add playcounter.js -->
+  <script src="playcounter.js"></script>
 
 </body>
 </html>

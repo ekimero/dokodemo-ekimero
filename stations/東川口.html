@@ -2,21 +2,20 @@
 <html lang="ja">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E7R52K1NYL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-E7R52K1NYL');
-</script>
-<script type="text/javascript">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E7R52K1NYL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-E7R52K1NYL');
+  </script>
+  <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "spvu3f92us");
-</script>
+  </script>
   <meta name="title" content="東川口 | どこでも駅メロ">
   <meta name="author" content="ekimero">
   <meta charset="utf-8" />
@@ -191,47 +190,35 @@
     </section>
   </main>
 
-  <script>
+   <script>
     function showSection(sectionId) {
-      // Hide all sections
       document.querySelectorAll('.company-section').forEach(section => {
         section.style.display = 'none';
       });
-      
-      // Show selected section
       document.getElementById(sectionId).style.display = 'block';
-      
-      // Update tab styles
       document.querySelectorAll('.section-tab').forEach(tab => {
         tab.classList.remove('active');
       });
       event.currentTarget.classList.add('active');
     }
 
-    // Load station data and display melodies
     document.addEventListener('DOMContentLoaded', function() {
       const stationName = decodeURIComponent(window.location.pathname
         .split('/').pop()
         .replace('.html', ''));
       
-      // Update page title and metadata with actual station name
-      document.title = `${stationName} | どこでも駅メロ | 発車メロディアーカイブ・駅ベル検索サイト`;
+      // Update page metadata
+      document.title = `${stationName} | どこでも駅メロ`;
       document.querySelector('meta[name="title"]').content = `${stationName} | どこでも駅メロ`;
       document.querySelector('meta[property="og:title"]').content = `${stationName} | どこでも駅ベル`;
-      document.querySelector('meta[property="og:site_name"]').content = `${stationName} | どこでも駅ベル`;
+      document.querySelector('h1').textContent = `${stationName}駅の発車メロディー`;
       
-      // Update h1 with actual station name
-      document.querySelector('.station-hero h1').textContent = `${stationName}駅の発車メロディー`;
-      
-      // Fetch station data
       fetch('/dokodemo-ekimero/stations.json')
         .then(response => response.json())
         .then(allStations => {
-          // Filter melodies for this station
           const stationMelodies = allStations.filter(st => st.station === stationName);
           
           if (stationMelodies.length === 0) {
-            // If no melodies found for this station
             document.querySelector('.station-hero p').textContent = 
               'この駅の発車メロディーは見つかりませんでした';
             return;
@@ -243,7 +230,6 @@
           const toeiMelodies = stationMelodies.filter(m => m.company === '都営地下鉄');
           const archiveMelodies = stationMelodies.filter(m => m.company === '過去のメロディ' || m.status === '過去');
           
-          // Render each section
           renderMelodies(jrMelodies, 'jr-melody-list', 'jr-no-melodies');
           renderMelodies(metroMelodies, 'metro-melody-list', 'metro-no-melodies');
           renderMelodies(toeiMelodies, 'toei-melody-list', 'toei-no-melodies');
@@ -267,7 +253,6 @@
         
         noMelodiesElement.style.display = 'none';
         listElement.innerHTML = melodies.map(melody => {
-          // Handle audio path - prepend /dokodemo-ekimero/ if not absolute URL
           let audioSrc = melody.file;
           if (audioSrc && !audioSrc.match(/^https?:\/\//)) {
             audioSrc = audioSrc.startsWith('audio/') ? 
@@ -286,30 +271,13 @@
           `;
         }).join('');
       }
-    });
-    
-function incrementGlobalPlayCount() {
-  if (!window.db) return; // db not initialized yet?
 
-  const counterRef = window.db.ref("totalPlays");
-  counterRef.transaction(current => (current || 0) + 1);
-}
+      // Header search functionality
+      let headerStationsData = [];
+      fetch('/dokodemo-ekimero/stations.json')
+        .then(res => res.json())
+        .then(data => headerStationsData = data);
 
-// In your play button handler:
-button.addEventListener("click", () => {
-  const audio = new Audio(file);
-  audio.play();
-
-  incrementGlobalPlayCount();
-});
-
-    // Header search bar instant search
-    let headerStationsData = [];
-    fetch('/dokodemo-ekimero/stations.json')
-      .then(res => res.json())
-      .then(data => headerStationsData = data);
-
-    document.addEventListener('DOMContentLoaded', function() {
       const headerInput = document.getElementById('header-search');
       const headerResults = document.getElementById('header-search-results');
       if (headerInput) {
@@ -354,6 +322,31 @@ button.addEventListener("click", () => {
     });
   </script>
 
+  <!-- Firebase Integration -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyBrgf00OFxksjZuFOQxgB1qUjZmLSG7yqk",
+      authDomain: "dokodemo-ekimero.firebaseapp.com",
+      databaseURL: "https://dokodemo-ekimero-default-rtdb.firebaseio.com",
+      projectId: "dokodemo-ekimero",
+      storageBucket: "dokodemo-ekimero.firebasestorage.app",
+      messagingSenderId: "189766315545",
+      appId: "1:189766315545:web:e88fb50dc039f7d2f28488",
+      measurementId: "G-EPCBNCPN4F"
+    };
+    
+    // Initialize Firebase
+    if (!firebase.apps.length) {
+      firebase.initializeApp(firebaseConfig);
+    }
+  </script>
+  
+  <!-- Play Counter Tracking -->
+  <script src="/dokodemo-ekimero/playcounter.js"></script>
+
   <footer>
     <a href="/dokodemo-ekimero/index.html" class="footer-logo-link">
       <img src="/dokodemo-ekimero/logo.png" alt="Site Icon" class="footer-icon">
@@ -361,31 +354,5 @@ button.addEventListener("click", () => {
     <p>ご利用ありがとうございます。</p>
     <p>鉄道モバイル: https://www.te2do.jp.</p>
   </footer>
-<!-- Add these inside your HTML file (e.g. in <head> or before </body>) -->
-
-<!-- Firebase App (the core SDK) -->
-<script src="https://www.gstatic.com/firebasejs/9.24.0/firebase-app-compat.js"></script>
-
-<!-- Firebase Realtime Database -->
-<script src="https://www.gstatic.com/firebasejs/9.24.0/firebase-database-compat.js"></script>
-
-<script>
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyBrgf00OFxksjZuFOQxgB1qUjZmLSG7yqk",
-    authDomain: "dokodemo-ekimero.firebaseapp.com",
-    databaseURL: "https://dokodemo-ekimero-default-rtdb.firebaseio.com",
-    projectId: "dokodemo-ekimero",
-    storageBucket: "dokodemo-ekimero.firebasestorage.app",
-    messagingSenderId: "189766315545",
-    appId: "1:189766315545:web:e88fb50dc039f7d2f28488",
-    measurementId: "G-EPCBNCPN4F"
-  };
-
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  const db = firebase.database();
-</script>
-
 </body>
 </html>

@@ -83,4 +83,19 @@ function render(data) {
     `;
     container.appendChild(div);
   });
+  
+function incrementGlobalPlayCount() {
+  if (!window.db) return; // db not initialized yet?
+
+  const counterRef = window.db.ref("totalPlays");
+  counterRef.transaction(current => (current || 0) + 1);
+}
+
+// In your play button handler:
+button.addEventListener("click", () => {
+  const audio = new Audio(file);
+  audio.play();
+
+  incrementGlobalPlayCount();
+});
 }

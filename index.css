@@ -421,6 +421,89 @@ header {
   outline: 3px solid #64b5f6;
   outline-offset: 3px;
 }
+/* === Scale Everything Slightly Larger for Better Visibility === */
+html {
+  font-size: 18px; /* Default is ~16px. Increase for overall scale-up */
+}
+
+body {
+  line-height: 1.75; /* More breathing room */
+}
+
+/* Main heading and hero */
+h1 {
+  font-size: 2.5em; /* Was 2.2em */
+  margin-bottom: 32px; /* Add spacing */
+}
+
+.hero {
+  font-size: 1.05em; /* Was 0.95em */
+}
+
+.hero-logo {
+  width: 140px; /* Was 120px */
+  height: 140px;
+}
+
+/* Buttons */
+.company-btn {
+  padding: 16px 32px; /* Was 14px 30px */
+  font-size: 1.1em; /* Slight increase */
+  border-radius: 14px;
+}
+
+/* Station cards */
+.station {
+  padding: 24px 28px; /* More spacious */
+}
+
+.station strong {
+  font-size: 1.25em;
+}
+
+.station em {
+  font-size: 1.05em;
+}
+
+/* Filters */
+select {
+  font-size: 1.05em;
+  padding: 8px 14px;
+  min-width: 160px;
+}
+
+/* Footer */
+footer {
+  font-size: 1em; /* Was 0.9em */
+}
+
+/* Adjust main container width */
+main {
+  max-width: 1100px; /* Was 900px */
+}
+/* === Smaller Header === */
+header {
+  padding: 0 24px;
+  height: 56px;
+}
+
+/* Smaller logo */
+.logo {
+  height: 36px;
+  width: 36px;
+  margin-right: 8px;
+}
+
+/* Smaller animated header text */
+.header1 {
+  font-size: 1.5em; /* Was 2em */
+  letter-spacing: 0.5px;
+}
+.company-btn {
+  padding: 10px 20px;     /* Was 14px 30px */
+  font-size: 0.9em;        /* Was 1em */
+  border-radius: 8px;      /* Was 12px */
+}
 
 
 /* ===== Mobile Styles ===== */

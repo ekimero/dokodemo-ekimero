@@ -207,12 +207,7 @@
         .split('/').pop()
         .replace('.html', ''));
       
-      // Update page metadata
-      document.title = `${stationName} | どこでも駅メロ`;
-      document.querySelector('meta[name="title"]').content = `${stationName} | どこでも駅メロ`;
-      document.querySelector('meta[property="og:title"]').content = `${stationName} | どこでも駅ベル`;
-      document.querySelector('h1').textContent = `${stationName}駅の発車メロディー`;
-      
+ 
       fetch('/dokodemo-ekimero/stations.json')
         .then(response => response.json())
         .then(allStations => {

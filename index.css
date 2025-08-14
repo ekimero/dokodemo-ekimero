@@ -291,3 +291,94 @@ footer {
   .quick-btns { flex-direction: column; gap: 10px; }
   #filters { flex-direction: column; }
 }
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 15px; /* Slightly bigger for readability */
+  }
+
+  body {
+    padding-bottom: 60px; /* Space for fixed elements if needed */
+  }
+
+  /* HEADER */
+  header {
+    flex-direction: row;
+    height: 56px;
+    padding: 0 12px;
+    gap: 6px;
+    justify-content: space-between;
+  }
+
+  .header1 {
+    font-size: 1.2em;
+  }
+
+  .logo {
+    height: 32px;
+    width: 32px;
+    margin-right: 6px;
+  }
+
+  nav {
+    display: none; /* Hide desktop nav */
+  }
+
+  /* MAIN CONTENT */
+  main {
+    margin: 20px auto;
+    padding: 0 12px;
+  }
+
+  h1 {
+    font-size: 1.6em;
+    margin-bottom: 16px;
+  }
+
+  .hero {
+    margin: 32px 0 24px;
+    font-size: 0.95em;
+  }
+
+  .hero-logo {
+    width: 72px;
+    height: 72px;
+  }
+
+  /* QUICK LINKS */
+  .quick-btns {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .quick-btns a {
+    padding: 12px;
+    font-size: 1em;
+    width: 100%;
+    border-radius: var(--radius);
+  }
+
+  /* FILTERS */
+  #filters {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+  }
+  select {
+    width: 100%;
+    font-size: 0.95em;
+  }
+
+  /* STATION LIST */
+  #station-list {
+    gap: 14px;
+  }
+  .station {
+    padding: 14px 16px;
+  }
+
+  /* FOOTER */
+  footer {
+    font-size: 0.75em;
+    padding: 10px 8px;
+  }
+}

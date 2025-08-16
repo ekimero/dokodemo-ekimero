@@ -84,7 +84,7 @@ function render(data) {
         <input type="checkbox" checked onchange="this.parentElement.nextElementSibling.loop = this.checked;">
         ループ
       </label>
-      <audio controls src="${entry.file}"></audio>
+      <audio controls controlsList="nodownload" src="${entry.file}"></audio>
     `;
 
     container.appendChild(div);

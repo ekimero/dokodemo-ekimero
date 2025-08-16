@@ -114,7 +114,7 @@ function render(data) {
             <input type="checkbox" class="loop-checkbox" checked>
             ループ
           </label>
-          <audio controls src="${audioSrc}" class="station-audio"></audio>
+          <audio controls controlsList="nodownload" src="${audioSrc}" class="station-audio"></audio>
         </div>
       ` : '<span style="color:#888;">音声ファイルなし</span>'}
     `;

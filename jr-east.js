@@ -88,7 +88,7 @@ function render(data) {
       div.innerHTML = `
         <strong>${entry.station}</strong><br>
         <em>${entry.melody}</em><br>
-        <audio controls src="${entry.file}"></audio>
+        <audio controls controlsList="nodownload" src="${entry.file}"></audio>
       `;
       section.appendChild(div);
     });

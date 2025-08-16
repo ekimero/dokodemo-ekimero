@@ -83,7 +83,7 @@ function render(data) {
           <input type="checkbox" class="loop-checkbox" checked>
           ループ
         </label>
-        <audio controls src="${entry.file}" class="station-audio"></audio>
+        <audio controls controlsList="nodownload" src="${entry.file}" class="station-audio"></audio>
       </div>
     `;
 

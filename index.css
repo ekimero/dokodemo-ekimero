@@ -544,4 +544,19 @@ footer {
     display: block;
   }
 }
+/* ===== Footer light gray with hover effect ===== */
+footer {
+  color: #888888;           /* default light gray text */
+  background: none;         /* keep background transparent */
+}
+
+footer a {
+  color: #888888;           /* links match footer color */
+  text-decoration: none;    /* remove underline */
+  transition: color 0.3s;   /* smooth hover transition */
+}
+
+footer a:hover {
+  color: #555555;           /* darker gray on hover */
+}
 

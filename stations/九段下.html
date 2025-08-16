@@ -8,23 +8,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="九段下発車メロディー。発車メロディ・駅ベルを駅や路線ごとに探して聴けるアーカイブサイト。JR東日本、東京メトロ、都営地下鉄の駅メロを多数収録。">
   <meta name="keywords" content="発車メロディ,発車メロディー,駅メロ,駅ベル,発車ベル,どこでも駅メロ,どこでも発車ベル,どこでも発車メロディ, 九段下">
-  <link rel="icon" type="image/png" href="/dokodemo-ekimero/favicon-32x32.png" sizes="32x32">
-  <link rel="shortcut icon" type="image/png" href="/dokodemo-ekimero/favicon-32x32.png" sizes="32x32">
-  <meta property="og:image" content="/dokodemo-ekimero/logo.png">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="shortcut icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <meta property="og:image" content="/logo.png">
   <meta property="og:description" content="九段下発車メロディー。発車メロディ・駅ベルを駅や路線ごとに探して聴けるアーカイブサイト。JR東日本、東京メトロ、都営地下鉄の駅メロを多数収録。">
   <meta property="og:title" content="九段下 | どこでも駅ベル">
-  <meta property="og:url" content="https://ekimero.github.io/dokodemo-ekimero/stations/九段下.html">
+  <meta property="og:url" content="https://ekimero.github.io/stations/九段下.html">
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:site_name" content="九段下 | どこでも駅ベル">
   <title>九段下 | どこでも駅メロ | 発車メロディアーカイブ・駅ベル検索サイト</title>
-  <link rel="stylesheet" href="/dokodemo-ekimero/index.css">
-  <link rel="canonical" href="https://ekimero.github.io/dokodemo-ekimero/stations/九段下.html" />
+  <link rel="stylesheet" href="/index.css">
+  <link rel="canonical" href="https://ekimero.github.io/stations/九段下.html" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "九段下 | どこでも駅メロ | 発車メロディアーカイブ・駅ベル検索サイト",
-    "url": "https://ekimero.github.io/dokodemo-ekimero/stations/九段下.html",
+    "url": "https://ekimero.github.io/stations/九段下.html",
     "description": "九段下発車メロディー。発車メロディ・駅ベルを駅や路線ごとに探して聴けるアーカイブサイト。JR東日本、東京メトロ、都営地下鉄の駅メロを多数収録。",
     "inLanguage": "ja"
   }
@@ -106,16 +106,16 @@
 </head>
 <body>
   <header>
-    <a href="/dokodemo-ekimero/index.html" class="title-link">
-      <img src="/dokodemo-ekimero/logo.png" alt="どこでも駅メロのロゴ - 発車メロディ検索サイト" class="logo">
+    <a href="/index.html" class="title-link">
+      <img src="/logo.png" alt="どこでも駅メロのロゴ - 発車メロディ検索サイト" class="logo">
       <b class="header1">どこでも駅メロ</b>
     </a>
     <nav>
-      <a href="/dokodemo-ekimero/index.html" class="company-btn">ホーム</a>
-      <a href="/dokodemo-ekimero/jr-east.html" class="company-btn">JR東日本</a>
-      <a href="/dokodemo-ekimero/tokyo-metro.html" class="company-btn">東京メトロ</a>
-      <a href="/dokodemo-ekimero/toei.html" class="company-btn">都営地下鉄</a>
-      <a href="/dokodemo-ekimero/archive.html" class="company-btn">全アーカイブ</a>
+      <a href="/index.html" class="company-btn">ホーム</a>
+      <a href="/jr-east.html" class="company-btn">JR東日本</a>
+      <a href="/tokyo-metro.html" class="company-btn">東京メトロ</a>
+      <a href="/toei.html" class="company-btn">都営地下鉄</a>
+      <a href="/archive.html" class="company-btn">全アーカイブ</a>
       <div style="position:relative;display:inline-block;min-width:220px;vertical-align:middle;">
         <input id="header-search" type="text" placeholder="駅名・メロディ名で検索" style="font-size:1em;padding:8px 14px;border-radius:8px;border:1px solid #bcd;box-shadow:0 2px 12px #1976d220;width:180px;">
         <div id="header-search-results" style="position:absolute;top:110%;left:0;width:100%;background:#fff;box-shadow:0 2px 12px #1976d220;border-radius:8px;z-index:100;display:none;"></div>
@@ -209,7 +209,7 @@
       document.querySelector('.station-hero h1').textContent = `${stationName}駅の発車メロディー`;
       
       // Fetch station data
-      fetch('/dokodemo-ekimero/stations.json')
+      fetch('/stations.json')
         .then(response => response.json())
         .then(allStations => {
           // Filter melodies for this station
@@ -252,12 +252,12 @@
         
         noMelodiesElement.style.display = 'none';
         listElement.innerHTML = melodies.map(melody => {
-          // Handle audio path - prepend /dokodemo-ekimero/ if not absolute URL
+          // Handle audio path - prepend // if not absolute URL
           let audioSrc = melody.file;
           if (audioSrc && !audioSrc.match(/^https?:\/\//)) {
             audioSrc = audioSrc.startsWith('audio/') ? 
-              `/dokodemo-ekimero/${audioSrc}` : 
-              `/dokodemo-ekimero/audio/${audioSrc}`;
+              `//${audioSrc}` : 
+              `//audio/${audioSrc}`;
           }
           
           return `
@@ -275,7 +275,7 @@
 
     // Header search bar instant search
     let headerStationsData = [];
-    fetch('/dokodemo-ekimero/stations.json')
+    fetch('/stations.json')
       .then(res => res.json())
       .then(data => headerStationsData = data);
 
@@ -303,10 +303,10 @@
             let audioSrc = st.file;
             if (audioSrc && !audioSrc.match(/^https?:\/\//)) {
               audioSrc = audioSrc.startsWith('audio/') ? 
-                `/dokodemo-ekimero/${audioSrc}` : 
-                `/dokodemo-ekimero/audio/${audioSrc}`;
+                `//${audioSrc}` : 
+                `//audio/${audioSrc}`;
             }
-            const stationUrl = `/dokodemo-ekimero/stations/${encodeURIComponent(st.station)}.html`;
+            const stationUrl = `/stations/${encodeURIComponent(st.station)}.html`;
             return `<div style="padding:10px 14px;border-bottom:1px solid #eee;display:flex;align-items:center;gap:10px;">
               <a href="${stationUrl}" style="font-weight:700;color:#1976d2;text-decoration:underline;flex:1;">${st.station}</a>
               <span style="font-size:0.95em;color:#333;">${st.melody || ''}</span>

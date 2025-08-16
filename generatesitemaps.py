@@ -16,7 +16,7 @@ urlset = ET.Element("urlset", {
 
 # Add homepage entry
 home_url = ET.SubElement(urlset, "url")
-ET.SubElement(home_url, "loc").text = "https://ekimero.github.io/dokodemo-ekimero/"
+ET.SubElement(home_url, "loc").text = "https://ekimero.github.io/"
 ET.SubElement(home_url, "lastmod").text = datetime.utcnow().isoformat() + "Z"
 ET.SubElement(home_url, "priority").text = "1.00"
 
@@ -26,7 +26,7 @@ station_names = sorted(set(entry["station"] for entry in data))
 # Add station URLs
 for station in station_names:
     url = ET.SubElement(urlset, "url")
-    ET.SubElement(url, "loc").text = f"https://ekimero.github.io/dokodemo-ekimero/stations/{station}.html"
+    ET.SubElement(url, "loc").text = f"https://ekimero.github.io/stations/{station}.html"
     ET.SubElement(url, "lastmod").text = datetime.utcnow().isoformat() + "Z"
     ET.SubElement(url, "priority").text = "0.80"
 

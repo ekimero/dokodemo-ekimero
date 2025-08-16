@@ -28,18 +28,18 @@
   <meta property="og:image" content="logo.png">
   <meta property="og:description" content="発車メロディー・駅メロを駅や路線ごとに探して聴けるアーカイブサイト。JR東日本、東京メトロ、都営地下鉄の駅メロを多数収録。">
   <meta property="og:title" content="どこでも駅メロ | 発車メロディーアーカイブ・駅メロ検索サイト">
-  <meta property="og:url" content="https://ekimero.github.io/dokodemo-ekimero">
+  <meta property="og:url" content="https://ekimero.github.io/">
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:site_name" content="どこでも駅メロ | 発車メロディーアーカイブ・駅メロ検索サイト">
   <title>どこでも駅メロ | 発車メロディーアーカイブ・駅メロ検索サイト</title>
   <link rel="stylesheet" href="index.css">
-  <link rel="canonical" href="https://ekimero.github.io/dokodemo-ekimero/" />
+  <link rel="canonical" href="https://ekimero.github.io/" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "どこでも駅メロ | 発車メロディーアーカイブ・駅メロ検索サイト",
-      "url": "https://ekimero.github.io/dokodemo-ekimero/",
+      "url": "https://ekimero.github.io/",
       "description": "どこでも発車メロディー・駅メロを駅や路線ごとに探して聴けるアーカイブサイト。JR東日本、東京メトロ、都営地下鉄の駅メロを多数収録。",
       "inLanguage": "ja"
     }
@@ -158,7 +158,7 @@
 
   </main>
 
-  <!-- Firebase and other scripts -->
+<!-- Firebase and other scripts -->
   <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
   <script>
@@ -196,6 +196,9 @@
   <!-- Play counter tracking -->
   <script src="playcounter.js"></script>
   
+  <!-- Play counter tracking -->
+  <script src="playcounter.js"></script>
+  
   <!-- Existing scripts -->
   <script>
  // Header search bar instant search
@@ -228,7 +231,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       headerResults.innerHTML = matches.map(st => {
         const audioSrc = st.file ? (st.file.match(/^https?:\/\//) ? st.file : st.file) : '';
-        const stationUrl = `/dokodemo-ekimero/stations/${encodeURIComponent(st.station)}.html`;
+        const stationUrl = `/stations/${encodeURIComponent(st.station)}.html`;
 
         return `
           <div class="header-station" style="padding:12px 14px; border-bottom:1px solid #eee;">
@@ -292,7 +295,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       results.innerHTML = matches.map(st => {
         const audioSrc = st.file ? (st.file.match(/^https?:\/\//) ? st.file : st.file) : '';
-        const stationUrl = `/dokodemo-ekimero/stations/${encodeURIComponent(st.station)}.html`;
+        const stationUrl = `/stations/${encodeURIComponent(st.station)}.html`;
         return `
           <div class="station" style="margin-bottom:18px;">
             <div class="station-text">

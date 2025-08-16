@@ -23,23 +23,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="新浦安駅 | どこでも発車メロディー・駅メロを駅や路線ごとに探して聴けるアーカイブサイト。JR東日本、東京メトロ、都営地下鉄の駅メロを多数収録。">
   <meta name="keywords" content="発車メロディ,発車メロディー,駅メロ,駅ベル,発車ベル,どこでも駅メロ,どこでも発車ベル,どこでも発車メロディ, 新浦安駅発車メロディー">
-  <link rel="icon" type="image/png" href="/dokodemo-ekimero/favicon-32x32.png" sizes="32x32">
-  <link rel="shortcut icon" type="image/png" href="/dokodemo-ekimero/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="shortcut icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
   <meta property="og:image" content="logo.png">
   <meta property="og:description" content="新浦安駅 | どこでも発車メロディー・駅メロを駅や路線ごとに探して聴けるアーカイブサイト。JR東日本、東京メトロ、都営地下鉄の駅メロを多数収録。">
   <meta property="og:title" content="新浦安駅 | どこでも駅メロ | 発車メロディーアーカイブ・駅メロ検索サイト">
-  <meta property="og:url" content="https://ekimero.github.io/dokodemo-ekimero/stations/新浦安.html">
+  <meta property="og:url" content="https://ekimero.github.io/stations/新浦安.html">
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:site_name" content="新浦安駅 | どこでも駅メロ | 発車メロディーアーカイブ・駅メロ検索サイト">
   <title>新浦安駅 | どこでも駅メロ | 発車メロディーアーカイブ・駅メロ検索サイト</title>
-  <link rel="stylesheet" href="/dokodemo-ekimero/index.css">
-  <link rel="canonical" href="https://ekimero.github.io/dokodemo-ekimero/stations/新浦安.html" />
+  <link rel="stylesheet" href="/index.css">
+  <link rel="canonical" href="https://ekimero.github.io/stations/新浦安.html" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "新浦安駅 | どこでも駅メロ | 発車メロディーアーカイブ・駅メロ検索サイト",
-    "url": "https://ekimero.github.io/dokodemo-ekimero/stations/新浦安.html",
+    "url": "https://ekimero.github.io/stations/新浦安.html",
     "description": "{新浦安駅 | どこでも発車メロディー・駅メロを駅や路線ごとに探して聴けるアーカイブサイト。JR東日本、東京メトロ、都営地下鉄の駅メロを多数収録。",
     "inLanguage": "ja"
   }
@@ -121,16 +121,16 @@
 </head>
 <body>
   <header>
-    <a href="/dokodemo-ekimero/index.html" class="title-link">
-      <img src="/dokodemo-ekimero/logo.png" alt="どこでも駅メロのロゴ - 発車メロディ検索サイト" class="logo">
+    <a href="/index.html" class="title-link">
+      <img src="/logo.png" alt="どこでも駅メロのロゴ - 発車メロディ検索サイト" class="logo">
       <b class="header1">どこでも駅メロ</b>
     </a>
     <nav>
-      <a href="/dokodemo-ekimero/index.html" class="company-btn">ホーム</a>
-      <a href="/dokodemo-ekimero/jr-east.html" class="company-btn">JR東日本</a>
-      <a href="/dokodemo-ekimero/tokyo-metro.html" class="company-btn">東京メトロ</a>
-      <a href="/dokodemo-ekimero/toei.html" class="company-btn">都営地下鉄</a>
-      <a href="/dokodemo-ekimero/archive.html" class="company-btn">全アーカイブ</a>
+      <a href="/index.html" class="company-btn">ホーム</a>
+      <a href="/jr-east.html" class="company-btn">JR東日本</a>
+      <a href="/tokyo-metro.html" class="company-btn">東京メトロ</a>
+      <a href="/toei.html" class="company-btn">都営地下鉄</a>
+      <a href="/archive.html" class="company-btn">全アーカイブ</a>
       <div style="position:relative;display:inline-block;min-width:220px;vertical-align:middle;">
         <input id="header-search" type="text" placeholder="駅名・メロディ名で検索" style="font-size:1em;padding:8px 14px;border-radius:8px;border:1px solid #bcd;box-shadow:0 2px 12px #1976d220;width:300px;">
         <div id="header-search-results" style="position:absolute;top:110%;left:0;width:100%;background:#fff;box-shadow:0 2px 12px #1976d220;border-radius:8px;z-index:100;display:none;"></div>
@@ -191,189 +191,115 @@
     </section>
   </main>
 
-   <script>
-    function showSection(sectionId) {
-      document.querySelectorAll('.company-section').forEach(section => {
-        section.style.display = 'none';
-      });
-      document.getElementById(sectionId).style.display = 'block';
-      document.querySelectorAll('.section-tab').forEach(tab => {
-        tab.classList.remove('active');
-      });
+<script>
+  function showSection(sectionId, event) {
+    // Hide all sections
+    document.querySelectorAll('.company-section').forEach(section => {
+      section.style.display = 'none';
+    });
+
+    // Show the selected section
+    document.getElementById(sectionId).style.display = 'block';
+
+    // Remove 'active' from all tabs
+    document.querySelectorAll('.section-tab').forEach(tab => {
+      tab.classList.remove('active');
+    });
+
+    // Add 'active' to the clicked tab
+    if (event && event.currentTarget) {
       event.currentTarget.classList.add('active');
     }
-
-    document.addEventListener('DOMContentLoaded', function() {
-      const stationName = decodeURIComponent(window.location.pathname
-        .split('/').pop()
-        .replace('.html', ''));
-      
- 
-      fetch('/dokodemo-ekimero/stations.json')
-        .then(response => response.json())
-        .then(allStations => {
-          const stationMelodies = allStations.filter(st => st.station === stationName);
-          
-          if (stationMelodies.length === 0) {
-            document.querySelector('.station-hero p').textContent = 
-              'この駅の発車メロディーは見つかりませんでした';
-            return;
-          }
-          
-          // Separate melodies by company
-          const jrMelodies = stationMelodies.filter(m => m.company === 'JR東日本');
-          const metroMelodies = stationMelodies.filter(m => m.company === '東京メトロ');
-          const toeiMelodies = stationMelodies.filter(m => m.company === '都営地下鉄');
-          const archiveMelodies = stationMelodies.filter(m => m.company === '過去のメロディ' || m.status === '過去');
-          
-          renderMelodies(jrMelodies, 'jr-melody-list', 'jr-no-melodies');
-          renderMelodies(metroMelodies, 'metro-melody-list', 'metro-no-melodies');
-          renderMelodies(toeiMelodies, 'toei-melody-list', 'toei-no-melodies');
-          renderMelodies(archiveMelodies, 'archive-melody-list', 'archive-no-melodies');
-        })
-        .catch(error => {
-          console.error('Error loading station data:', error);
-          document.querySelector('.station-hero p').textContent = 
-            'データの読み込み中にエラーが発生しました';
-        });
-      
-      function renderMelodies(melodies, listId, noMelodiesId) {
-  const listElement = document.getElementById(listId);
-  const noMelodiesElement = document.getElementById(noMelodiesId);
-
-  if (melodies.length === 0) {
-    noMelodiesElement.style.display = 'block';
-    listElement.innerHTML = '';
-    return;
   }
 
-  noMelodiesElement.style.display = 'none';
-listElement.innerHTML = melodies.map(melody => {
-  let audioSrc = melody.file;
-  if (audioSrc && !audioSrc.match(/^https?:\/\//)) {
-    audioSrc = audioSrc.startsWith('audio/') ?
-      `/dokodemo-ekimero/${audioSrc}` :
-      `/dokodemo-ekimero/audio/${audioSrc}`;
-  }
-
-  return `
-    <div class="melody-item" style="flex-direction: column; align-items: flex-start; gap: 8px;">
-      <div class="melody-info">
-        <div class="melody-name">${melody.melody || '名称不明'}</div>
-        <div class="melody-line">${melody.line}${melody.direction ? ` (${melody.direction}方面)` : ''}</div>
-      </div>
-      ${audioSrc ? `
-        <div class="melody-audio-wrapper" style="display:flex;flex-direction:row;align-items:center;gap:8px;">
-          <audio controls controlsList="nodownload" class="melody-audio" src="${audioSrc}" loop></audio>
-          <label style="font-size:0.85em; display:flex; align-items:center; gap:4px; cursor:pointer;">
-            <input type="checkbox" class="loop-checkbox" checked> ループ
-          </label>
-        </div>
-      ` : '<span style="color:#888;">音源なし</span>'}
-    </div>
-  `;
-}).join('');
-
-
-  // Add event listeners for loop checkboxes
-  listElement.querySelectorAll('.loop-checkbox').forEach(checkbox => {
-    const audio = checkbox.closest('div').querySelector('audio');
-    // Make sure audio.loop matches the checkbox state on render
-    if (audio) audio.loop = checkbox.checked;
-    checkbox.addEventListener('change', () => {
-      if (audio) audio.loop = checkbox.checked;
-    });
-  });
-}
-
-
-
-      // Header search functionality
-      let headerStationsData = [];
-      fetch('/dokodemo-ekimero/stations.json')
-        .then(res => res.json())
-        .then(data => headerStationsData = data);
-
-      const headerInput = document.getElementById('header-search');
-      const headerResults = document.getElementById('header-search-results');
-      if (headerInput) {
-        headerInput.addEventListener('input', function() {
-          const q = headerInput.value.trim().toLowerCase();
-          if (!q) {
-            headerResults.style.display = 'none';
-            headerResults.innerHTML = '';
-            return;
-          }
-          const matches = headerStationsData.filter(st =>
-            st.station.toLowerCase().includes(q) ||
-            (st.melody && st.melody.toLowerCase().includes(q))
-          ).slice(0, 8);
-          if (matches.length === 0) {
-            headerResults.innerHTML = '<div style="padding:12px;color:#888;font-size:1em;">該当なし</div>';
-            headerResults.style.display = 'block';
-            return;
-          }
-          headerResults.innerHTML = matches.map(st => {
-            let audioSrc = st.file;
-            if (audioSrc && !audioSrc.match(/^https?:\/\//)) {
-              audioSrc = audioSrc.startsWith('audio/') ? 
-                `/dokodemo-ekimero/${audioSrc}` : 
-                `/dokodemo-ekimero/audio/${audioSrc}`;
-            }
-            const stationUrl = `/dokodemo-ekimero/stations/${encodeURIComponent(st.station)}.html`;
-            return `<div style="padding:10px 14px;border-bottom:1px solid #eee;display:flex;align-items:center;gap:10px;">
-              <a href="${stationUrl}" style="font-weight:700;color:#1976d2;text-decoration:underline;flex:1;">${st.station}</a>
-              <span style="font-size:0.95em;color:#333;">${st.melody || ''}</span>
-              ${audioSrc ? `<audio controls controlsList="nodownload" src="${audioSrc}" style="width:90px;min-width:60px;"></audio>` : ''}
-            </div>`;
-          }).join('');
-          headerResults.style.display = 'block';
-        });
-        document.addEventListener('click', function(e) {
-          if (!headerResults.contains(e.target) && e.target !== headerInput) {
-            headerResults.style.display = 'none';
-          }
-        });
-      }
-    });
-  </script>
-
-  <!-- Firebase Integration -->
-  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
-  <script>
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-      apiKey: "AIzaSyBrgf00OFxksjZuFOQxgB1qUjZmLSG7yqk",
-      authDomain: "dokodemo-ekimero.firebaseapp.com",
-      databaseURL: "https://dokodemo-ekimero-default-rtdb.firebaseio.com",
-      projectId: "dokodemo-ekimero",
-      storageBucket: "dokodemo-ekimero.firebasestorage.app",
-      messagingSenderId: "189766315545",
-      appId: "1:189766315545:web:e88fb50dc039f7d2f28488",
-      measurementId: "G-EPCBNCPN4F"
-    };
+  document.addEventListener('DOMContentLoaded', function() {
+    const stationName = decodeURIComponent(window.location.pathname
+      .split('/').pop()
+      .replace('.html', ''));
     
-    // Initialize Firebase
-    if (!firebase.apps.length) {
-      firebase.initializeApp(firebaseConfig);
-    }
-  </script>
-  
-  <!-- Play Counter Tracking -->
-  <script src="/dokodemo-ekimero/playcounter.js"></script>
+    fetch('/stations.json')
+      .then(response => response.json())
+      .then(allStations => {
+        const stationMelodies = allStations.filter(st => st.station === stationName);
+        
+        if (stationMelodies.length === 0) {
+          document.querySelector('.station-hero p').textContent = 
+            'この駅の発車メロディーは見つかりませんでした';
+          return;
+        }
+        
+        // Separate melodies by company
+        const jrMelodies = stationMelodies.filter(m => m.company === 'JR東日本');
+        const metroMelodies = stationMelodies.filter(m => m.company === '東京メトロ');
+        const toeiMelodies = stationMelodies.filter(m => m.company === '都営地下鉄');
+        const archiveMelodies = stationMelodies.filter(m => m.company === '過去のメロディ' || m.status === '過去');
+        
+        renderMelodies(jrMelodies, 'jr-melody-list', 'jr-no-melodies');
+        renderMelodies(metroMelodies, 'metro-melody-list', 'metro-no-melodies');
+        renderMelodies(toeiMelodies, 'toei-melody-list', 'toei-no-melodies');
+        renderMelodies(archiveMelodies, 'archive-melody-list', 'archive-no-melodies');
+      })
+      .catch(error => {
+        console.error('Error loading station data:', error);
+        document.querySelector('.station-hero p').textContent = 
+          'データの読み込み中にエラーが発生しました';
+      });
+    
+    function renderMelodies(melodies, listId, noMelodiesId) {
+      const listElement = document.getElementById(listId);
+      const noMelodiesElement = document.getElementById(noMelodiesId);
 
- <footer>
-    <a href="/dokodemo-ekimero/index.html" class="footer-logo-link">
-      <img src="/dokodemo-ekimero/logo.png" alt="Site Icon" class="footer-icon">
-    </a>
-    <p>鉄道モバイル: https://www.te2do.jp</p>
-  <p><a href="/dokodemo-ekimero/credits.html">詳細</a></p>
-  </footer>
-  <script>
+      if (melodies.length === 0) {
+        noMelodiesElement.style.display = 'block';
+        listElement.innerHTML = '';
+        return;
+      }
+
+      noMelodiesElement.style.display = 'none';
+      listElement.innerHTML = melodies.map(melody => {
+        let audioSrc = melody.file;
+        if (audioSrc && !audioSrc.match(/^https?:\/\//)) {
+          audioSrc = audioSrc.startsWith('audio/') ?
+            `/${audioSrc}` :
+            `/audio/${audioSrc}`;
+        }
+
+        return `
+          <div class="melody-item" style="flex-direction: column; align-items: flex-start; gap: 8px;">
+            <div class="melody-info">
+              <div class="melody-name">${melody.melody || '名称不明'}</div>
+              <div class="melody-line">${melody.line}${melody.direction ? ` (${melody.direction}方面)` : ''}</div>
+            </div>
+            ${audioSrc ? `
+              <div class="melody-audio-wrapper" style="display:flex;flex-direction:row;align-items:center;gap:8px;">
+                <audio controls controlsList="nodownload" class="melody-audio" src="${audioSrc}" loop></audio>
+                <label style="font-size:0.85em; display:flex; align-items:center; gap:4px; cursor:pointer;">
+                  <input type="checkbox" class="loop-checkbox" checked> ループ
+                </label>
+              </div>
+            ` : '<span style="color:#888;">音源なし</span>'}
+          </div>
+        `;
+      }).join('');
+
+      // Add event listeners for loop checkboxes
+      listElement.querySelectorAll('.loop-checkbox').forEach(checkbox => {
+        const audio = checkbox.closest('div').querySelector('audio');
+        if (audio) audio.loop = checkbox.checked;
+        checkbox.addEventListener('change', () => {
+          if (audio) audio.loop = checkbox.checked;
+        });
+      });
+    }
+
+   
+  });
+</script>
+
+<script>
 // Header search bar instant search
 let headerStationsData = [];
-fetch('/dokodemo-ekimero/stations.json')
+fetch('/stations.json')
   .then(res => res.json())
   .then(data => headerStationsData = data);
 
@@ -400,8 +326,8 @@ document.addEventListener('DOMContentLoaded', function() {
       }
 
       headerResults.innerHTML = matches.map(st => {
-        const audioSrc = st.file ? (st.file.match(/^https?:\/\//) ? st.file : st.file) : '';
-        const stationUrl = `/dokodemo-ekimero/stations/${encodeURIComponent(st.station)}.html`;
+        const audioSrc = st.file ? (st.file.match(/^https?:\/\//) ? st.file : `/${st.file}`) : '';
+        const stationUrl = `/stations/${encodeURIComponent(st.station)}.html`;
 
         return `
           <div class="header-station" style="padding:12px 14px; border-bottom:1px solid #eee;">
@@ -433,6 +359,41 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 </script>
+
+
+  <!-- Firebase Integration -->
+   <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+   const firebaseConfig = {
+      apiKey: "AIzaSyBrgf00OFxksjZuFOQxgB1qUjZmLSG7yqk",
+      authDomain: "dokodemo-ekimero.firebaseapp.com",
+      databaseURL: "https://dokodemo-ekimero-default-rtdb.firebaseio.com",
+      projectId: "dokodemo-ekimero",
+      storageBucket: "dokodemo-ekimero.firebasestorage.app",
+      messagingSenderId: "189766315545",
+      appId: "1:189766315545:web:e88fb50dc039f7d2f28488",
+      measurementId: "G-EPCBNCPN4F"
+    };
+    
+    // Initialize Firebase
+    if (!firebase.apps.length) {
+      firebase.initializeApp(firebaseConfig);
+    }
+  </script>
+  
+  <!-- Play Counter Tracking -->
+  <script src="/playcounter.js"></script>
+
+ <footer>
+    <a href="/index.html" class="footer-logo-link">
+      <img src="/logo.png" alt="Site Icon" class="footer-icon">
+    </a>
+    <p>鉄道モバイル: https://www.te2do.jp</p>
+  <p><a href="/credits.html">詳細</a></p>
+  </footer>
+  
 
 </body>
 </html>

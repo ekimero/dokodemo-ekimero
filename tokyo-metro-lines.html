@@ -28,18 +28,18 @@
   <meta property="og:image" content="logo.png">
   <meta property="og:description" content="東京メトロ路線 | どこでも発車メロディー・駅メロを駅や路線ごとに探して聴けるアーカイブサイト。JR東日本、東京メトロ、都営地下鉄の駅メロを多数収録。">
   <meta property="og:title" content="東京メトロ路線 | どこでも駅メロ | 発車メロディーアーカイブ・駅メロ検索サイト">
-  <meta property="og:url" content="https://ekimero.github.io/dokodemo-ekimero/tokyo-metro-archive.html">
+  <meta property="og:url" content="https://ekimero.github.io/tokyo-metro-archive.html">
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:site_name" content="東京メトロ路線 | どこでも駅メロ | 発車メロディーアーカイブ・駅メロ検索サイト">
   <title>東京メトロ路線 | どこでも駅メロ | 発車メロディーアーカイブ・駅メロ検索サイト</title>
   <link rel="stylesheet" href="index.css">
-  <link rel="canonical" href="https://ekimero.github.io/dokodemo-ekimero/tokyo-metro-archive.html" />
+  <link rel="canonical" href="https://ekimero.github.io/tokyo-metro-archive.html" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "東京メトロ路線 | どこでも駅メロ | 発車メロディーアーカイブ・駅メロ検索サイト",
-      "url": "https://ekimero.github.io/dokodemo-ekimero/tokyo-metro-archive.html",
+      "url": "https://ekimero.github.io/tokyo-metro-archive.html",
       "description": "東京メトロ路線 | どこでも発車メロディー・駅メロを駅や路線ごとに探して聴けるアーカイブサイト。JR東日本、東京メトロ、都営地下鉄の駅メロを多数収録。",
       "inLanguage": "ja"
     }
@@ -113,7 +113,7 @@
           if (st.file) {
             audioSrc = st.file.match(/^https?:\/\//) ? st.file : (st.file.startsWith('audio/') ? st.file : `audio/${st.file}`);
           }
-          const stationUrl = `/dokodemo-ekimero/stations/${encodeURIComponent(st.station)}.html`;
+          const stationUrl = `/stations/${encodeURIComponent(st.station)}.html`;
           return `
             <div style="padding:10px 14px;border-bottom:1px solid #eee;">
               <div style="font-weight:700;color:#1976d2;">
@@ -167,7 +167,28 @@
       appId: "1:189766315545:web:e88fb50dc039f7d2f28488",
       measurementId: "G-EPCBNCPN4F"
     };
-    firebase.initializeApp(firebaseConfig);
+    
+    // Initialize Firebase if not already initialized
+    if (!firebase.apps.length) {
+      firebase.initializeApp(firebaseConfig);
+    }
+
+    // Real-time play counter with error handling
+    const counterRef = firebase.database().ref("totalPlays");
+    counterRef.on("value", 
+      (snapshot) => {
+        const count = snapshot.val() || 0;
+        document.getElementById("playCountNumber").textContent = count.toLocaleString();
+      },
+      (error) => {
+        console.error("Counter error:", error);
+        document.getElementById("playCountNumber").textContent = "エラー";
+      }
+    );
+  </script>
+  
+  <!-- Play counter tracking -->
+  <script src="playcounter.js"></script>
   </script>
   
   <!-- Add playcounter.js -->

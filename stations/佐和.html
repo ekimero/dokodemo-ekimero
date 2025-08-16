@@ -247,31 +247,32 @@
   }
 
   noMelodiesElement.style.display = 'none';
-  listElement.innerHTML = melodies.map(melody => {
-    let audioSrc = melody.file;
-    if (audioSrc && !audioSrc.match(/^https?:\/\//)) {
-      audioSrc = audioSrc.startsWith('audio/') ?
-        `/dokodemo-ekimero/${audioSrc}` :
-        `/dokodemo-ekimero/audio/${audioSrc}`;
-    }
+listElement.innerHTML = melodies.map(melody => {
+  let audioSrc = melody.file;
+  if (audioSrc && !audioSrc.match(/^https?:\/\//)) {
+    audioSrc = audioSrc.startsWith('audio/') ?
+      `/dokodemo-ekimero/${audioSrc}` :
+      `/dokodemo-ekimero/audio/${audioSrc}`;
+  }
 
-    return `
-      <div class="melody-item">
-        <div class="melody-info">
-          <div class="melody-name">${melody.melody || '名称不明'}</div>
-          <div class="melody-line">${melody.line}${melody.direction ? ` (${melody.direction}方面)` : ''}</div>
-        </div>
-        ${audioSrc ? `
-          <div style="display:flex;flex-direction:column;align-items:flex-start;gap:4px;margin-top:4px;">
-            <label style="font-size:0.85em; display:flex; align-items:center; gap:4px; cursor:pointer;">
-              <input type="checkbox" class="loop-checkbox" checked> ループ
-            </label>
-            <audio controls class="melody-audio" src="${audioSrc}" loop></audio>
-          </div>
-        ` : '<span style="color:#888;">音源なし</span>'}
+  return `
+    <div class="melody-item" style="flex-direction: column; align-items: flex-start; gap: 8px;">
+      <div class="melody-info">
+        <div class="melody-name">${melody.melody || '名称不明'}</div>
+        <div class="melody-line">${melody.line}${melody.direction ? ` (${melody.direction}方面)` : ''}</div>
       </div>
-    `;
-  }).join('');
+      ${audioSrc ? `
+        <div class="melody-audio-wrapper" style="display:flex;flex-direction:row;align-items:center;gap:8px;">
+          <audio controls class="melody-audio" src="${audioSrc}" loop></audio>
+          <label style="font-size:0.85em; display:flex; align-items:center; gap:4px; cursor:pointer;">
+            <input type="checkbox" class="loop-checkbox" checked> ループ
+          </label>
+        </div>
+      ` : '<span style="color:#888;">音源なし</span>'}
+    </div>
+  `;
+}).join('');
+
 
   // Add event listeners for loop checkboxes
   listElement.querySelectorAll('.loop-checkbox').forEach(checkbox => {

@@ -19,7 +19,6 @@ fetch('stations.json')
   });
 
 function populateFilters(data) {
-  // Fill filters with initial options, in order found in data
   fillSelectOrdered(companyFilter, getUniqueOrdered(data, "company"));
   fillSelectOrdered(lineFilter, getUniqueOrdered(data, "line"));
   fillSelectOrdered(stationFilter, getUniqueOrdered(data, "station"));
@@ -30,7 +29,6 @@ function populateFilters(data) {
   });
 }
 
-// Get unique values preserving order
 function getUniqueOrdered(data, key) {
   const seen = new Set();
   return data
@@ -42,12 +40,8 @@ function getUniqueOrdered(data, key) {
     });
 }
 
-// Fill a select element with options in order
 function fillSelectOrdered(select, items) {
-  // Clear except first option ("すべて")
-  while (select.options.length > 1) {
-    select.remove(1);
-  }
+  while (select.options.length > 1) select.remove(1);
   items.forEach(item => {
     const option = document.createElement('option');
     option.value = item;
@@ -57,54 +51,31 @@ function fillSelectOrdered(select, items) {
 }
 
 function filterAndRender() {
-  // Current selections
   const companyVal = companyFilter.value;
   const lineVal = lineFilter.value;
   const stationVal = stationFilter.value;
   const melodyVal = melodyFilter.value;
 
-  // Filter data by all selected filters
-  const filteredData = stationData.filter(entry => {
-    return (!companyVal || entry.company === companyVal) &&
-           (!lineVal || entry.line === lineVal) &&
-           (!stationVal || entry.station === stationVal) &&
-           (!melodyVal || entry.melody === melodyVal);
-  });
+  const filteredData = stationData.filter(entry =>
+    (!companyVal || entry.company === companyVal) &&
+    (!lineVal || entry.line === lineVal) &&
+    (!stationVal || entry.station === stationVal) &&
+    (!melodyVal || entry.melody === melodyVal)
+  );
 
-  // Update filter options based on current filteredData & current selections
   updateFilters(filteredData, {companyVal, lineVal, stationVal, melodyVal});
-
-  // Render stations in original order but filtered
   render(filteredData);
 }
 
 function updateFilters(filteredData, currentVals) {
-  // For each filter, update its options so only matching ones appear
-
-  // Companies in filtered data
-  const companies = getUniqueOrdered(filteredData, "company");
-  // Lines in filtered data
-  const lines = getUniqueOrdered(filteredData, "line");
-  // Stations in filtered data
-  const stations = getUniqueOrdered(filteredData, "station");
-  // Melodies in filtered data
-  const melodies = getUniqueOrdered(filteredData, "melody");
-
-  // Update each select, keeping current selection if still valid,
-  // otherwise reset to ""
-
-  updateSelectOptions(companyFilter, companies, currentVals.companyVal);
-  updateSelectOptions(lineFilter, lines, currentVals.lineVal);
-  updateSelectOptions(stationFilter, stations, currentVals.stationVal);
-  updateSelectOptions(melodyFilter, melodies, currentVals.melodyVal);
+  updateSelectOptions(companyFilter, getUniqueOrdered(filteredData, "company"), currentVals.companyVal);
+  updateSelectOptions(lineFilter, getUniqueOrdered(filteredData, "line"), currentVals.lineVal);
+  updateSelectOptions(stationFilter, getUniqueOrdered(filteredData, "station"), currentVals.stationVal);
+  updateSelectOptions(melodyFilter, getUniqueOrdered(filteredData, "melody"), currentVals.melodyVal);
 }
 
-// Helper to update a select element options (except first "すべて")
-// and keep selection if still valid, else reset to ""
 function updateSelectOptions(select, items, currentVal) {
-  while (select.options.length > 1) {
-    select.remove(1);
-  }
+  while (select.options.length > 1) select.remove(1);
   items.forEach(item => {
     const option = document.createElement('option');
     option.value = item;
@@ -112,11 +83,7 @@ function updateSelectOptions(select, items, currentVal) {
     select.appendChild(option);
   });
 
-  if (currentVal && items.includes(currentVal)) {
-    select.value = currentVal;
-  } else {
-    select.value = "";
-  }
+  select.value = currentVal && items.includes(currentVal) ? currentVal : "";
 }
 
 function render(data) {
@@ -130,26 +97,40 @@ function render(data) {
   data.forEach(entry => {
     const div = document.createElement('div');
     div.className = 'station';
-    // Support both 'audio' and 'file' property for audio path
+
     let audioSrc = entry.audio || entry.file || '';
     if (audioSrc && !audioSrc.match(/^https?:\/\//) && !audioSrc.startsWith('audio/')) {
       audioSrc = 'audio/' + audioSrc;
     }
-    // Make station name clickable, linking to /stations/[station].html
+
     const stationLink = `<a href="stations/${encodeURIComponent(entry.station)}.html" style="color:#1976d2;text-decoration:underline;font-weight:700;">${entry.station}</a>`;
+
     div.innerHTML = `
-  <strong>${stationLink}</strong>（${entry.line}、${entry.company}）<br>
-  <em>${entry.melody}</em><br>
-  ${audioSrc ? `
-    <label style="font-size:0.85em; display:block; margin-bottom:4px; cursor:pointer;">
-      <input type="checkbox" checked onchange="this.parentElement.nextElementSibling.loop = this.checked;">
-      ループ
-    </label>
-    <audio controls src="${audioSrc}"></audio>
-  ` : '<span style="color:#888;">音声ファイルなし</span>'}
-`;
+      <strong>${stationLink}</strong>（${entry.line}、${entry.company}）<br>
+      <em>${entry.melody}</em><br>
+      ${audioSrc ? `
+        <div style="display:flex; flex-direction:column; gap:4px; margin-top:4px;">
+          <label style="font-size:0.85em; display:flex; align-items:center; gap:4px; cursor:pointer;">
+            <input type="checkbox" class="loop-checkbox" checked>
+            ループ
+          </label>
+          <audio controls src="${audioSrc}" class="station-audio"></audio>
+        </div>
+      ` : '<span style="color:#888;">音声ファイルなし</span>'}
+    `;
 
     container.appendChild(div);
   });
-  
+
+  // Set loop on page load and update when checkbox changes
+  container.querySelectorAll('.station').forEach(stationDiv => {
+    const checkbox = stationDiv.querySelector('.loop-checkbox');
+    const audio = stationDiv.querySelector('.station-audio');
+    if (checkbox && audio) {
+      audio.loop = checkbox.checked;
+      checkbox.addEventListener('change', () => {
+        audio.loop = checkbox.checked;
+      });
+    }
+  });
 }

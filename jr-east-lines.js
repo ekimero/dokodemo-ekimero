@@ -68,35 +68,44 @@ function render(data) {
     container.innerHTML = '<p>該当する結果がありません。</p>';
     return;
   }
+
   data.forEach(entry => {
     const div = document.createElement('div');
     div.className = 'station';
-    // Make station name clickable, linking to /stations/[station].html
+
     const stationLink = `<a href="/dokodemo-ekimero/stations/${encodeURIComponent(entry.station)}.html" style="color:#1976d2;text-decoration:underline;font-weight:700;">${entry.station}</a>`;
-        div.innerHTML = `
+    
+    div.innerHTML = `
       <strong>${stationLink}</strong><br>
       <em>${entry.melody}</em><br>
-      <label style="font-size:0.85em; display:block; margin-bottom:4px; cursor:pointer;">
-        <input type="checkbox" checked onchange="this.parentElement.nextElementSibling.loop = this.checked;">
-        ループ
-      </label>
-      <audio controls src="${entry.file}"></audio>
+      <div style="display:flex; flex-direction:column; gap:4px; margin-top:4px;">
+        <label style="font-size:0.85em; display:flex; align-items:center; gap:4px; cursor:pointer;">
+          <input type="checkbox" class="loop-checkbox" checked>
+          ループ
+        </label>
+        <audio controls src="${entry.file}" class="station-audio"></audio>
+      </div>
     `;
+
     container.appendChild(div);
   });
 
-function incrementGlobalPlayCount() {
-  if (!window.db) return; // db not initialized yet?
-
-  const counterRef = window.db.ref("totalPlays");
-  counterRef.transaction(current => (current || 0) + 1);
+  // ✅ Set loop for all audios on page load
+  container.querySelectorAll('.station').forEach(stationDiv => {
+    const checkbox = stationDiv.querySelector('.loop-checkbox');
+    const audio = stationDiv.querySelector('.station-audio');
+    if (checkbox && audio) {
+      audio.loop = checkbox.checked; // loop ON if checked by default
+      checkbox.addEventListener('change', () => {
+        audio.loop = checkbox.checked;
+      });
+    }
+  });
 }
 
-// In your play button handler:
-button.addEventListener("click", () => {
-  const audio = new Audio(file);
-  audio.play();
-
-  incrementGlobalPlayCount();
-});
+// Optional: global play counter
+function incrementGlobalPlayCount() {
+  if (!window.db) return; // db not initialized yet?
+  const counterRef = window.db.ref("totalPlays");
+  counterRef.transaction(current => (current || 0) + 1);
 }

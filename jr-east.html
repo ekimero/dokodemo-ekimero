@@ -119,55 +119,74 @@
       });
   </script>
 <script>
-// Header search bar instant search
-let headerStationsData = [];
-fetch('stations.json')
-  .then(res => res.json())
-  .then(data => headerStationsData = data);
+  let headerStationsData = [];
+  fetch('stations.json')
+    .then(res => res.json())
+    .then(data => headerStationsData = data);
 
-document.addEventListener('DOMContentLoaded', function() {
-  const headerInput = document.getElementById('header-search');
-  const headerResults = document.getElementById('header-search-results');
-  if (headerInput) {
-    headerInput.addEventListener('input', function() {
-      const q = headerInput.value.trim().toLowerCase();
-      if (!q) {
-        headerResults.style.display = 'none';
-        headerResults.innerHTML = '';
-        return;
-      }
-      const matches = headerStationsData.filter(st =>
-        st.station.toLowerCase().includes(q) ||
-        st.melody.toLowerCase().includes(q)
-      ).slice(0, 8);
-      if (matches.length === 0) {
-        headerResults.innerHTML = '<div style="padding:12px;color:#888;font-size:1em;">該当なし</div>';
-        headerResults.style.display = 'block';
-        return;
-      }
-      headerResults.innerHTML = matches.map(st => {
-        let audioSrc = '';
-        if (st.audio) {
-          audioSrc = st.audio.match(/^https?:\/\//) ? st.audio : (st.audio.startsWith('audio/') ? st.audio : `audio/${st.audio}`);
+  document.addEventListener('DOMContentLoaded', function() {
+    const headerInput = document.getElementById('header-search');
+    const headerResults = document.getElementById('header-search-results');
+
+    // Increase input width
+    headerInput.style.width = '300px';
+
+    if (headerInput) {
+      headerInput.addEventListener('input', function() {
+        const q = headerInput.value.trim().toLowerCase();
+        if (!q) {
+          headerResults.style.display = 'none';
+          headerResults.innerHTML = '';
+          return;
         }
-        // Make station name clickable, linking to /stations/[station].html
-        const stationUrl = `stations/${encodeURIComponent(st.station)}.html`;
-        return `<div style="padding:10px 14px;border-bottom:1px solid #eee;display:flex;align-items:center;gap:10px;">
-          <a href="${stationUrl}" style="font-weight:700;color:#1976d2;text-decoration:underline;flex:1;">${st.station}</a>
-          <span style="font-size:0.95em;color:#333;">${st.melody}</span>
-          ${audioSrc ? `<audio controls src="${audioSrc}" style="width:90px;min-width:60px;"></audio>` : ''}
-        </div>`;
-      }).join('');
-      headerResults.style.display = 'block';
-    });
-    document.addEventListener('click', function(e) {
-      if (!headerResults.contains(e.target) && e.target !== headerInput) {
-        headerResults.style.display = 'none';
-      }
-    });
-  }
-});
+
+        const matches = headerStationsData.filter(st =>
+          st.station.toLowerCase().includes(q) ||
+          st.melody.toLowerCase().includes(q)
+        ).slice(0, 8);
+
+        if (matches.length === 0) {
+          headerResults.innerHTML = '<div style="padding:12px;color:#888;font-size:1em;">該当なし</div>';
+          headerResults.style.display = 'block';
+          return;
+        }
+
+        headerResults.innerHTML = matches.map(st => {
+          let audioSrc = '';
+          if (st.file) {
+            audioSrc = st.file.match(/^https?:\/\//) ? st.file : (st.file.startsWith('audio/') ? st.file : `audio/${st.file}`);
+          }
+          const stationUrl = `/dokodemo-ekimero/stations/${encodeURIComponent(st.station)}.html`;
+          return `
+            <div style="padding:10px 14px;border-bottom:1px solid #eee;">
+              <div style="font-weight:700;color:#1976d2;">
+                <a href="${stationUrl}" style="color:#1976d2;text-decoration:underline;">${st.station}</a>
+              </div>
+              <div style="font-size:0.95em;color:#333;">${st.melody}</div>
+              ${audioSrc ? `
+                <div style="display:flex;align-items:center;gap:6px;margin-top:4px;">
+                  <audio controls src="${audioSrc}" style="width:180px;min-width:120px;" loop></audio>
+                  <label style="font-size:0.85em; display:flex; align-items:center; gap:4px; cursor:pointer;">
+                    <input type="checkbox" checked onchange="this.parentElement.parentElement.querySelector('audio').loop = this.checked;">
+                    Loop
+                  </label>
+                </div>
+              ` : ''}
+            </div>
+          `;
+        }).join('');
+        headerResults.style.display = 'block';
+      });
+
+      document.addEventListener('click', function(e) {
+        if (!headerResults.contains(e.target) && e.target !== headerInput) {
+          headerResults.style.display = 'none';
+        }
+      });
+    }
+  });
 </script>
+
  <footer>
     <a href="index.html" class="footer-logo-link">
       <img src="logo.png" alt="Site Icon" class="footer-icon">

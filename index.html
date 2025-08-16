@@ -58,7 +58,11 @@
       <a href="toei.html" class="company-btn">都営地下鉄</a>
       <a href="archive.html" class="company-btn">全アーカイブ</a>
       <div style="position:relative;display:inline-block;min-width:220px;vertical-align:middle;">
-        <input id="header-search" type="text" placeholder="駅名・メロディ名で検索" style="font-size:1em;padding:8px 14px;border-radius:8px;border:1px solid #bcd;box-shadow:0 2px 12px #1976d220;width:180px;">
+        <input id="header-search" type="text" placeholder="駅名・メロディ名で検索" 
+  style="font-size:1em;padding:8px 14px;border-radius:8px;
+  border:1px solid #bcd;box-shadow:0 2px 12px #1976d220;width:300px;">
+
+
         <div id="header-search-results" style="position:absolute;top:110%;left:0;width:100%;background:#fff;box-shadow:0 2px 12px #1976d220;border-radius:8px;z-index:100;display:none;"></div>
       </div>
     </nav>
@@ -190,103 +194,128 @@
   
   <!-- Existing scripts -->
   <script>
-    // Header search bar instant search
-    let headerStationsData = [];
-    fetch('stations.json')
-      .then(res => res.json())
-      .then(data => headerStationsData = data);
+  // Header search bar instant search
+  let headerStationsData = [];
+  fetch('stations.json')
+    .then(res => res.json())
+    .then(data => headerStationsData = data);
 
-    document.addEventListener('DOMContentLoaded', function() {
-      const headerInput = document.getElementById('header-search');
-      const headerResults = document.getElementById('header-search-results');
-      if (headerInput) {
-        headerInput.addEventListener('input', function() {
-          const q = headerInput.value.trim().toLowerCase();
-          if (!q) {
-            headerResults.style.display = 'none';
-            headerResults.innerHTML = '';
-            return;
-          }
-          const matches = headerStationsData.filter(st =>
-            st.station.toLowerCase().includes(q) ||
-            st.melody.toLowerCase().includes(q)
-          ).slice(0, 8);
-          if (matches.length === 0) {
-            headerResults.innerHTML = '<div style="padding:12px;color:#888;font-size:1em;">該当なし</div>';
-            headerResults.style.display = 'block';
-            return;
-          }
-          headerResults.innerHTML = matches.map(st => {
-            let audioSrc = '';
-            if (st.audio) {
-              audioSrc = st.audio.match(/^https?:\/\//) ? st.audio : (st.audio.startsWith('audio/') ? st.audio : `audio/${st.audio}`);
-            }
-            const stationUrl = `/dokodemo-ekimero/stations/${encodeURIComponent(st.station)}.html`;
-            return `<div style="padding:10px 14px;border-bottom:1px solid #eee;display:flex;align-items:center;gap:10px;">
-              <a href="${stationUrl}" style="font-weight:700;color:#1976d2;text-decoration:underline;flex:1;">${st.station}</a>
-              <span style="font-size:0.95em;color:#333;">${st.melody}</span>
-              ${audioSrc ? `<audio controls src="${audioSrc}" style="width:90px;min-width:60px;"></audio>` : ''}
-            </div>`;
-          }).join('');
+  document.addEventListener('DOMContentLoaded', function() {
+    const headerInput = document.getElementById('header-search');
+    const headerResults = document.getElementById('header-search-results');
+    if (headerInput) {
+      headerInput.addEventListener('input', function() {
+        const q = headerInput.value.trim().toLowerCase();
+        if (!q) {
+          headerResults.style.display = 'none';
+          headerResults.innerHTML = '';
+          return;
+        }
+        const matches = headerStationsData.filter(st =>
+          st.station.toLowerCase().includes(q) ||
+          st.melody.toLowerCase().includes(q)
+        ).slice(0, 8);
+
+        if (matches.length === 0) {
+          headerResults.innerHTML = '<div style="padding:12px;color:#888;font-size:1em;">該当なし</div>';
           headerResults.style.display = 'block';
-        });
-        document.addEventListener('click', function(e) {
-          if (!headerResults.contains(e.target) && e.target !== headerInput) {
-            headerResults.style.display = 'none';
-          }
-        });
-      }
-    });
+          return;
+        }
 
-    // Search feature for stations and melodies
-    let stationsData = [];
-    fetch('stations.json')
-      .then(res => res.json())
-      .then(data => stationsData = data);
+        headerResults.innerHTML = matches.map(st => {
+          const audioSrc = st.file ? (st.file.match(/^https?:\/\//) ? st.file : st.file) : '';
+          const stationUrl = `/dokodemo-ekimero/stations/${encodeURIComponent(st.station)}.html`;
+         return `<div style="padding:10px 14px;border-bottom:1px solid #eee;display:flex;align-items:center;justify-content:space-between;gap:10px;">
+  <div style="display:flex;flex-direction:column;flex:1;min-width:0;">
+    <a href="${stationUrl}" style="font-weight:700;color:#1976d2;text-decoration:underline;">${st.station}</a>
+    <span style="font-size:0.95em;color:#333;">${st.melody}</span>
+  </div>
+${audioSrc ? `
+  <div style="display:flex;align-items:center;gap:6px;">
+    <audio controls src="${audioSrc}" style="width:100px;min-width:80px;" loop></audio>
+    <label style="font-size:0.85em; display:flex; align-items:center; gap:4px; cursor:pointer;">
+      <input type="checkbox" checked onchange="this.parentElement.parentElement.querySelector('audio').loop = this.checked;">
+      Loop
+    </label>
+  </div>
+` : ''}
 
-    document.addEventListener('DOMContentLoaded', function() {
-      const form = document.getElementById('search-form');
-      const input = document.getElementById('search-input');
-      const results = document.getElementById('search-results');
-      if (form) {
-        form.addEventListener('submit', function(e) {
-          e.preventDefault();
-          const q = input.value.trim();
-          if (!q) {
-            results.innerHTML = '';
-            return;
-          }
-          const lowerQ = q.toLowerCase();
-          const matches = stationsData.filter(st =>
-            st.station.toLowerCase().includes(lowerQ) ||
-            st.melody.toLowerCase().includes(lowerQ)
-          );
-          if (matches.length === 0) {
-            results.innerHTML = '<div style="padding:24px;color:#888;font-size:1.2em;">該当する駅やメロディは見つかりませんでした。</div>';
-            return;
-          }
-          results.innerHTML = matches.map(st => {
-            let audioSrc = '';
-            if (st.audio) {
-              audioSrc = st.audio.match(/^https?:\/\//) ? st.audio : (st.audio.startsWith('audio/') ? st.audio : `audio/${st.audio}`);
-            }
-            const stationUrl = `/dokodemo-ekimero/stations/${encodeURIComponent(st.station)}.html`;
-            return `
-              <div style="background:#fff;border-radius:16px;box-shadow:0 2px 12px #1976d220;padding:18px;margin-bottom:18px;display:flex;align-items:center;gap:18px;">
-                <div style="flex:1;min-width:0;">
-                  <div style="font-size:1.15em;font-weight:700;color:#1976d2;">
-                    <a href="${stationUrl}" style="color:#1976d2;text-decoration:underline;">${st.station}</a> (${st.line}・${st.company})
-                  </div>
-                  <div style="font-size:1.1em;color:#333;">${st.melody}</div>
+</div>`;
+
+        }).join('');
+        headerResults.style.display = 'block';
+      });
+
+      document.addEventListener('click', function(e) {
+        if (!headerResults.contains(e.target) && e.target !== headerInput) {
+          headerResults.style.display = 'none';
+        }
+      });
+    }
+  });
+
+  // Main search feature
+  let stationsData = [];
+  fetch('stations.json')
+    .then(res => res.json())
+    .then(data => stationsData = data);
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('search-form');
+    const input = document.getElementById('search-input');
+    const results = document.getElementById('search-results');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const q = input.value.trim();
+        if (!q) {
+          results.innerHTML = '';
+          return;
+        }
+        const lowerQ = q.toLowerCase();
+        const matches = stationsData.filter(st =>
+          st.station.toLowerCase().includes(lowerQ) ||
+          st.melody.toLowerCase().includes(lowerQ)
+        );
+
+        if (matches.length === 0) {
+          results.innerHTML = '<div style="padding:24px;color:#888;font-size:1.2em;">該当する駅やメロディは見つかりませんでした。</div>';
+          return;
+        }
+
+        results.innerHTML = matches.map(st => {
+          const audioSrc = st.file ? (st.file.match(/^https?:\/\//) ? st.file : st.file) : '';
+          const stationUrl = `/dokodemo-ekimero/stations/${encodeURIComponent(st.station)}.html`;
+          return `
+            <div style="background:#fff;border-radius:16px;box-shadow:0 2px 12px #1976d220;padding:18px;margin-bottom:18px;display:flex;align-items:center;gap:18px;">
+              <div style="flex:1;min-width:0;">
+                <div style="font-size:1.15em;font-weight:700;color:#1976d2;">
+                  <a href="${stationUrl}" style="color:#1976d2;text-decoration:underline;">${st.station}</a> (${st.line}・${st.company})
                 </div>
-                ${audioSrc ? `<audio controls src="${audioSrc}" style="width:180px;min-width:120px;"></audio>` : ''}
+                <div style="font-size:1.1em;color:#333;">${st.melody}</div>
               </div>
-            `;
-          }).join('');
-        });
-      }
-    });
-  </script>
+${audioSrc ? `
+  <div style="display:flex;align-items:center;gap:8px;">
+    <audio controls src="${audioSrc}" style="width:180px;min-width:120px;" loop></audio>
+    <label style="font-size:0.9em; display:flex; align-items:center; gap:4px; cursor:pointer;">
+      <input type="checkbox" checked onchange="this.parentElement.parentElement.querySelector('audio').loop = this.checked;">
+      Loop
+    </label>
+  </div>
+` : ''}
+</div>
+
+
+
+
+
+          `;
+        }).join('');
+      });
+    }
+  });
+</script>
+
 
   <footer>
     <a href="index.html" class="footer-logo-link">

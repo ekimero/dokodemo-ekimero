@@ -138,10 +138,17 @@ function render(data) {
     // Make station name clickable, linking to /stations/[station].html
     const stationLink = `<a href="stations/${encodeURIComponent(entry.station)}.html" style="color:#1976d2;text-decoration:underline;font-weight:700;">${entry.station}</a>`;
     div.innerHTML = `
-      <strong>${stationLink}</strong>（${entry.line}、${entry.company}）<br>
-      <em>${entry.melody}</em><br>
-      ${audioSrc ? `<audio controls src="${audioSrc}"></audio>` : '<span style="color:#888;">音声ファイルなし</span>'}
-    `;
+  <strong>${stationLink}</strong>（${entry.line}、${entry.company}）<br>
+  <em>${entry.melody}</em><br>
+  ${audioSrc ? `
+    <label style="font-size:0.85em; display:block; margin-bottom:4px; cursor:pointer;">
+      <input type="checkbox" checked onchange="this.parentElement.nextElementSibling.loop = this.checked;">
+      ループ
+    </label>
+    <audio controls src="${audioSrc}"></audio>
+  ` : '<span style="color:#888;">音声ファイルなし</span>'}
+`;
+
     container.appendChild(div);
   });
   

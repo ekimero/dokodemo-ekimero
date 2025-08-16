@@ -77,9 +77,13 @@ function render(data) {
     div.className = 'station';
     // Make station name clickable, linking to /stations/[station].html
     const stationLink = `<a href="/dokodemo-ekimero/stations/${encodeURIComponent(entry.station)}.html" style="color:#1976d2;text-decoration:underline;font-weight:700;">${entry.station}</a>`;
-    div.innerHTML = `
+        div.innerHTML = `
       <strong>${stationLink}</strong><br>
       <em>${entry.melody}</em><br>
+      <label style="font-size:0.85em; display:block; margin-bottom:4px; cursor:pointer;">
+        <input type="checkbox" checked onchange="this.parentElement.nextElementSibling.loop = this.checked;">
+        ループ
+      </label>
       <audio controls src="${entry.file}"></audio>
     `;
     container.appendChild(div);

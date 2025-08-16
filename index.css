@@ -383,3 +383,165 @@ footer {
   }
 }
 
+/* =========================
+   MOBILE HOME PAGE ADJUSTMENTS
+========================= */
+@media screen and (max-width: 768px) {
+
+  /* Hero Section */
+  .hero {
+    padding: 32px 16px 24px 16px !important;
+    margin-bottom: 32px !important;
+  }
+
+  .hero-logo {
+    width: 96px !important;
+    height: 96px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .hero h1 {
+    font-size: 1.8em !important;
+    margin-bottom: 12px !important;
+    letter-spacing: 1px;
+  }
+
+  .hero p {
+    font-size: 1em !important;
+    margin-bottom: 16px !important;
+  }
+
+  #search-form {
+    flex-direction: column !important;
+    gap: 8px !important;
+    max-width: 100% !important;
+  }
+  #search-form input, #search-form button {
+    width: 100% !important;
+    font-size: 1em !important;
+    padding: 10px 12px !important;
+  }
+
+  /* Quick Links Buttons */
+  .quick-links h2 {
+    font-size: 1.3em !important;
+    margin-bottom: 12px !important;
+  }
+  .quick-btns a {
+    min-width: auto !important;
+    padding: 12px 20px !important;
+    font-size: 1em !important;
+  }
+  .quick-btns {
+    gap: 12px !important;
+    flex-direction: column !important;
+  }
+
+  /* Play Stats Section */
+  .play-stats-section {
+    margin: 40px 12px !important;
+  }
+  .stats-container {
+    padding: 24px !important;
+    border-radius: 16px !important;
+  }
+  .stats-grid {
+    gap: 16px !important;
+  }
+  .stat-box {
+    padding: 12px !important;
+  }
+  .stat-box div {
+    font-size: 0.9em !important;
+  }
+  #playCountNumber, #stationCount, #melodyCount {
+    font-size: 1.6em !important;
+  }
+
+  /* News / How-to / Links Sections */
+  .news, .howto, .links {
+    margin: 32px 12px !important;
+    padding: 20px !important;
+    border-radius: 16px !important;
+  }
+  .news h2, .howto h2, .links h2 {
+    font-size: 1.2em !important;
+    margin-bottom: 12px !important;
+  }
+  .news ul, .howto ol, .links ul {
+    font-size: 0.95em !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Footer */
+  footer {
+    padding: 12px 8px !important;
+    font-size: 0.75em !important;
+  }
+  .footer-icon {
+    width: 28px !important;
+    height: 28px !important;
+  }
+}
+/* =========================
+   SEARCH RESULTS RESPONSIVE
+========================= */
+#search-results .station {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 18px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(25, 118, 210, 0.13);
+  padding: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#search-results .station:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.2);
+}
+
+#search-results .station .station-text {
+  flex: 1;
+  min-width: 0;
+}
+
+#search-results .station .station-text strong {
+  font-size: 1.15em;
+  color: #1976d2;
+  display: block;
+  margin-bottom: 4px;
+}
+
+#search-results .station .station-text em {
+  color: #555;
+  display: block;
+  font-size: 1em;
+}
+
+/* Mobile layout: stack text on top of audio */
+@media screen and (max-width: 768px) {
+  #search-results .station {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+  }
+
+  #search-results .station .station-text {
+    width: 100%;
+  }
+
+  #search-results .station audio {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  #search-results .station label {
+    font-size: 0.85em;
+    margin-top: 4px;
+    display: block;
+  }
+}
+

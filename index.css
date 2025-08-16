@@ -544,4 +544,60 @@ footer {
     display: block;
   }
 }
+/* Melody items */
+.melody-item {
+  display: flex;
+  flex-direction: row; /* side-by-side on desktop */
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 16px;
+  margin-bottom: 12px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  gap: 16px;
+  flex-wrap: wrap; /* allow wrapping on small screens */
+}
+.melody-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.melody-info {
+  flex: 1 1 200px; /* grow and shrink, minimum 200px */
+  min-width: 0;
+}
+
+.melody-name {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.melody-line {
+  font-size: 0.95em;
+  color: #666;
+}
+
+.melody-audio-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  flex: 0 0 180px; /* fixed width on desktop */
+  min-width: 120px;
+}
+
+.melody-audio-wrapper audio {
+  width: 100%;
+}
+
+.loop-checkbox {
+  font-size: 0.85em;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
 

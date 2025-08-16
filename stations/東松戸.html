@@ -266,7 +266,7 @@
             <label style="font-size:0.85em; display:flex; align-items:center; gap:4px; cursor:pointer;">
               <input type="checkbox" class="loop-checkbox" checked> ループ
             </label>
-            <audio controls class="melody-audio" src="${audioSrc}"></audio>
+            <audio controls class="melody-audio" src="${audioSrc}" loop></audio>
           </div>
         ` : '<span style="color:#888;">音源なし</span>'}
       </div>
@@ -276,11 +276,14 @@
   // Add event listeners for loop checkboxes
   listElement.querySelectorAll('.loop-checkbox').forEach(checkbox => {
     const audio = checkbox.closest('div').querySelector('audio');
+    // Make sure audio.loop matches the checkbox state on render
+    if (audio) audio.loop = checkbox.checked;
     checkbox.addEventListener('change', () => {
       if (audio) audio.loop = checkbox.checked;
     });
   });
 }
+
 
 
       // Header search functionality
